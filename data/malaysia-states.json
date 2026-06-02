@@ -8,92 +8,120 @@
   "projection": {
     "type": "mercator",
     "center": [
-      109,
-      4
+      0,
+      0
     ],
-    "scale": 2400
+    "scale": 1728.362188696445,
+    "translate": [
+      -3007.1674208144773,
+      306.40262103676116
+    ]
   },
-  "states": [
+  "hotspots": [
     {
       "code": "PERLIS",
-      "pathD": "M225.94 289.16 L250.65 289.16 L250.65 272.72 L225.94 272.72 Z",
-      "kind": "rect"
+      "cx": 20.25,
+      "cy": 111.42,
+      "r": 22,
+      "kind": "state"
     },
     {
       "code": "KEDAH",
-      "pathD": "M207.09 335.04 L269.09 335.04 L269.09 272.72 L207.09 272.72 Z",
-      "kind": "rect"
+      "cx": 20.25,
+      "cy": 131.14,
+      "r": 22,
+      "kind": "state"
     },
     {
-      "code": "PULAU_PINANG",
-      "pathD": "M231.39 332.94 L246.47 332.94 L246.47 312.74 L231.39 312.74 Z",
-      "kind": "rect"
+      "code": "PULAU PINANG",
+      "cx": 20.86,
+      "cy": 144.48,
+      "r": 22,
+      "kind": "state"
     },
     {
       "code": "PERAK",
-      "pathD": "M225.94 394.27 L299.66 394.27 L299.66 299.27 L225.94 299.27 Z",
-      "kind": "rect"
+      "cx": 39.56,
+      "cy": 161.44,
+      "r": 22,
+      "kind": "state"
     },
     {
       "code": "KELANTAN",
-      "pathD": "M279.14 356.90 L334.43 356.90 L334.43 285.37 L279.14 285.37 Z",
-      "kind": "rect"
+      "cx": 69.72,
+      "cy": 143.27,
+      "r": 22,
+      "kind": "state"
     },
     {
       "code": "TERENGGANU",
-      "pathD": "M322.70 380.00 L374.64 380.00 L374.64 300.11 L322.70 300.11 Z",
-      "kind": "rect"
+      "cx": 99.89,
+      "cy": 156.9,
+      "r": 22,
+      "kind": "state"
     },
     {
       "code": "PAHANG",
-      "pathD": "M279.14 445.03 L374.64 445.03 L374.64 347.23 L279.14 347.23 Z",
-      "kind": "rect"
+      "cx": 84.81,
+      "cy": 193.2,
+      "r": 22,
+      "kind": "state"
     },
     {
       "code": "SELANGOR",
-      "pathD": "M254.01 440.84 L305.53 440.84 L305.53 385.04 L254.01 385.04 Z",
-      "kind": "rect"
+      "cx": 50.12,
+      "cy": 209.22,
+      "r": 22,
+      "kind": "state"
     },
     {
-      "code": "NEGERI_SEMBILAN",
-      "pathD": "M295.89 447.13 L336.94 447.13 L336.94 413.58 L295.89 413.58 Z",
-      "kind": "rect"
-    },
-    {
-      "code": "MELAKA",
-      "pathD": "M312.65 461.80 L331.92 461.80 L331.92 442.93 L312.65 442.93 Z",
-      "kind": "rect"
-    },
-    {
-      "code": "JOHOR",
-      "pathD": "M357.47 497.00 L457.58 497.00 L457.58 424.06 L357.47 424.06 Z",
-      "kind": "rect"
-    },
-    {
-      "code": "SABAH",
-      "pathD": "M860.12 375.80 L1030.61 375.80 L1030.61 238.54 L860.12 238.54 Z",
-      "kind": "rect"
-    },
-    {
-      "code": "SARAWAK",
-      "pathD": "M622.62 512.08 L878.97 512.08 L878.97 337.98 L622.62 337.98 Z",
-      "kind": "rect"
-    }
-  ],
-  "federal": [
-    {
-      "code": "KUALA_LUMPUR",
-      "cx": 293.79943603011543,
-      "cy": 416.09397805828644,
-      "r": 4,
-      "kind": "circle"
+      "code": "KUALA LUMPUR",
+      "cx": 60.37,
+      "cy": 211.64,
+      "r": 6,
+      "kind": "federal"
     },
     {
       "code": "PUTRAJAYA",
-      "cx": 294.21831505059436,
-      "cy": 424.90279788226763,
-      "r": 3,
-      "kind": "circle"
+      "cx": 60.68,
+      "cy": 217.98,
+      "r": 6,
+      "kind": "federal"
+    },
+    {
+      "code": "NEGERI SEMBILAN",
+      "cx": 76.66,
+      "cy": 221.91,
+      "r": 22,
+      "kind": "state"
+    },
+    {
+      "code": "MELAKA",
+      "cx": 80.89,
+      "cy": 237.91,
+      "r": 22,
+      "kind": "state"
+    },
+    {
+      "code": "JOHOR",
+      "cx": 142.12,
+      "cy": 244.55,
+      "r": 22,
+      "kind": "state"
+    },
+    {
+      "code": "SABAH",
+      "cx": 528.24,
+      "cy": 140.24,
+      "r": 22,
+      "kind": "state"
+    },
+    {
+      "code": "SARAWAK",
+      "cx": 401.55,
+      "cy": 221.91,
+      "r": 22,
+      "kind": "state"
     }
   ]
 }

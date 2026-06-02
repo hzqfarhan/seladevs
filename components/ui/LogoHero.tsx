@@ -9,7 +9,7 @@ export function LogoHero({
   className?: string;
   size?: number;
 }) {
-  const [theme, , mounted] = useTheme();
+  const { theme, mounted } = useTheme();
   const isLight = mounted && theme === "light";
   const src = isLight ? "/logo/seladevs-light.png" : "/logo/seladevs-dark.png";
 

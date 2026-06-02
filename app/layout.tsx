@@ -28,14 +28,12 @@ const themeInitScript = `
   try {
     var stored = localStorage.getItem('sd-theme');
     var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    var isLight = stored ? stored === 'light' : prefersLight;
-    if (!isLight) {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-    }
+    var theme = stored === 'light' || stored === 'dark' ? stored : (prefersLight ? 'light' : 'dark');
+    var html = document.documentElement;
+    html.classList.remove('dark', 'light');
+    html.classList.add(theme);
+    html.dataset.theme = theme;
+    html.style.colorScheme = theme;
   } catch(e) {}
 })();
 `;
@@ -101,7 +99,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jbMono.variable} ${pixel.variable} dark`}
+      className={`${inter.variable} ${jbMono.variable} ${pixel.variable}`}
       suppressHydrationWarning
     >
       <head>
