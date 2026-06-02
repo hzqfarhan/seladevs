@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Drawer } from "@/components/ui/Drawer";
-import { NAV_COLUMNS } from "@/data/content";
+import { NAV_COLUMNS, HEADER_LINKS } from "@/data/nav";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -12,40 +13,36 @@ export function Header() {
         <div className="flex items-center justify-between border border-sd-wine-500/30 bg-sd-bg-1/70 backdrop-blur rounded-full px-3 py-1.5">
           <div className="flex items-center gap-2">
             <button
+              type="button"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
               className="grid h-8 w-8 place-items-center rounded-full border border-sd-wine-500/40 text-sd-neon-soft hover:text-sd-neon hover:border-sd-neon transition-colors"
             >
               <span className="font-mono text-sm leading-none">+</span>
             </button>
-            <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-[0.2em] text-sd-ink-soft/55">
+            <Link
+              href="/"
+              className="hidden sm:inline font-mono text-[10px] uppercase tracking-[0.2em] text-sd-ink-soft/55 hover:text-sd-neon-soft"
+            >
               seladev_os
-            </span>
+            </Link>
           </div>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {[
-              { label: "showcase", href: "/showcase" },
-              { label: "members", href: "/members" },
-              { label: "guilds", href: "/guilds" },
-              { label: "events", href: "/events" },
-              { label: "jobs", href: "/jobs" },
-              { label: "bounty", href: "/code/bounty" },
-              { label: "map", href: "/map" },
-            ].map((l) => (
-              <a
+            {HEADER_LINKS.map((l) => (
+              <Link
                 key={l.href}
                 href={l.href}
                 className="font-mono text-[10px] uppercase tracking-[0.2em] text-sd-ink-soft/80 hover:text-sd-neon px-2 py-1 rounded-full hover:bg-sd-wine-700/30 transition-colors"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-1.5">
             <a
-              href="https://discord.gg"
+              href="https://discord.gg/seladevs"
               target="_blank"
               rel="noreferrer"
               aria-label="Discord"

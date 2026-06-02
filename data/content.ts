@@ -1,39 +1,6 @@
 export { STATES } from "./map";
 export { JOBS } from "./jobs";
-
-export const NAV_COLUMNS = [
-  {
-    eyebrow: "<project>",
-    items: [
-      { label: "showcase", href: "/showcase" },
-      { label: "manifesto", href: "/about" },
-    ],
-  },
-  {
-    eyebrow: "<community>",
-    items: [
-      { label: "builders", href: "/members" },
-      { label: "guild directory", href: "/guilds" },
-      { label: "events", href: "/events" },
-      { label: "news", href: "/news" },
-      { label: "changelog", href: "/changelog" },
-    ],
-  },
-  {
-    eyebrow: "<business>",
-    items: [
-      { label: "for companies", href: "/for-company" },
-      { label: "job board", href: "/jobs" },
-      { label: "bounty board", href: "/code/bounty" },
-    ],
-  },
-  {
-    eyebrow: "<government>",
-    items: [
-      { label: "our solution", href: "/for-government" },
-    ],
-  },
-];
+export { NAV_COLUMNS, HEADER_LINKS, FOOTER_LINKS } from "./nav";
 
 export const SHOWCASE = [
   { id: 1, title: "SplitHold", author: "kagerou1107" },

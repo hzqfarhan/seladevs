@@ -207,31 +207,6 @@ export const EVENTS: EventItem[] = [
     cover: 7,
   },
   {
-    id: 8,
-    slug: "august-townhall-builder-burnout",
-    title: "August Townhall: Builder Burnout",
-    category: "townhall",
-    start: "2026-08-06T20:00+08:00",
-    end: "2026-08-06T22:00+08:00",
-    venue: { name: "Online · Discord Stage", city: "Online", mode: "online" },
-    description:
-      "Open townhall on builder burnout. 3 short talks (10 min each), then structured breakout rooms. Topics: sustainable pace, the cult of overwork, and how to actually take a break without losing momentum.",
-    agenda: [
-      { time: "20:00", label: "intros" },
-      { time: "20:10", label: "talk 01: sustainable pace" },
-      { time: "20:25", label: "talk 02: cult of overwork" },
-      { time: "20:40", label: "talk 03: taking the break" },
-      { time: "20:55", label: "breakouts" },
-      { time: "21:45", label: "share-out" },
-    ],
-    speakers: [
-      { handle: "ameera.dev", name: "Ameera H.", role: "host" },
-    ],
-    capacity: 200,
-    rsvps: 76,
-    cover: 8,
-  },
-  {
     id: 9,
     slug: "telegram-titans-botathon",
     title: "Telegram Titans: Botathon",
@@ -239,8 +214,7 @@ export const EVENTS: EventItem[] = [
     start: "2026-08-22T10:00+08:00",
     end: "2026-08-22T20:00+08:00",
     venue: { name: "Seladevs Garage", city: "KL", mode: "in-person" },
-    description:
-      "10-hour botathon. Ship a working Telegram bot in a day. Themes: utility, devtools, bots-for-business. Prizes in RM and a paid guild slot for the top 3.",
+    description: "10-hour botathon. Ship a working Telegram bot in a day. Themes: utility, devtools, bots-for-business. Prizes in RM and a paid guild slot for the top 3.",
     agenda: [
       { time: "10:00", label: "doors + coffee" },
       { time: "10:30", label: "theme reveal" },
@@ -256,6 +230,34 @@ export const EVENTS: EventItem[] = [
     capacity: 80,
     rsvps: 52,
     cover: 9,
+  },
+  {
+    id: 10,
+    slug: "seladevs-buildathon-2026",
+    title: "SelaDevs Buildathon 2026",
+    category: "hacknight",
+    start: "2026-09-12T10:00+08:00",
+    end: "2026-09-13T22:00+08:00",
+    venue: { name: "KL Convention Centre", city: "KL", mode: "in-person" },
+    description: "Our flagship 36-hour buildathon. 200 builders, 12 bounties, RM 25,000 in prizes, and a panel of 6 judges from the SEA dev community. Open to SelaDevs members and guests.",
+    agenda: [
+      { time: "sat 10:00", label: "doors + coffee + bounty reveal" },
+      { time: "sat 11:00", label: "claim window opens" },
+      { time: "sat 18:00", label: "midpoint dinner" },
+      { time: "sun 06:00", label: "sunrise check-in" },
+      { time: "sun 20:00", label: "submissions close + demos" },
+      { time: "sun 22:00", label: "awards" },
+    ],
+    speakers: [
+      { handle: "kagerou1107", name: "Aiman R.", role: "host" },
+      { handle: "tsara.id", name: "Tsara I.", role: "judge" },
+      { handle: "ameera.dev", name: "Ameera H.", role: "judge" },
+      { handle: "strdst7", name: "Saifuddin R.", role: "judge" },
+      { handle: "syamir.kl", name: "Syamir T.", role: "judge" },
+    ],
+    capacity: 200,
+    rsvps: 134,
+    cover: 10,
   },
 ];
 
