@@ -1,0 +1,316 @@
+export type JobType = "full-time" | "contract" | "internship" | "part-time";
+
+export type Job = {
+  id: number;
+  slug: string;
+  company: string;
+  title: string;
+  location: string;
+  type: JobType;
+  salary: string;
+  posted: string;
+  postedDays: number;
+  tags: string[];
+  urgent: boolean;
+  verified: boolean;
+  description: string;
+  requirements: string[];
+  nice: string[];
+  perks: string[];
+  applyEmail: string;
+};
+
+export const JOBS: Job[] = [
+  {
+    id: 1,
+    slug: "runcloud-intern",
+    company: "RunCloud Sdn Bhd",
+    title: "Software Engineer Intern",
+    location: "Cyberjaya",
+    type: "internship",
+    salary: "RM700/mo",
+    posted: "25 days ago",
+    postedDays: 25,
+    tags: ["php", "laravel", "linux"],
+    urgent: false,
+    verified: true,
+    description:
+      "Work alongside the RunCloud platform team on the server management dashboard. You'll ship features that touch real customer servers, write integration tests, and learn production-grade PHP/Laravel from senior engineers who actually review your PRs.",
+    requirements: [
+      "Currently pursuing a CS / SE degree",
+      "Comfortable reading PHP and writing basic SQL",
+      "Comfortable in a Linux terminal",
+      "Available 3+ months full-time in Cyberjaya",
+    ],
+    nice: ["Have shipped a personal project end-to-end", "Familiar with Laravel or Symfony"],
+    perks: ["RM700 monthly stipend", "Free lunch", "Mentorship from senior engineers", "Letter of recommendation on completion"],
+    applyEmail: "jobs@runcloud.io",
+  },
+  {
+    id: 2,
+    slug: "peripamo-devsecops",
+    company: "Peripamo Technologies Sdn Bhd",
+    title: "Platform / DevSecOps Engineer",
+    location: "Kuala Lumpur",
+    type: "contract",
+    salary: "RM39,000 – RM45,000",
+    posted: "about 1 month ago",
+    postedDays: 30,
+    tags: ["kubernetes", "aws", "terraform"],
+    urgent: false,
+    verified: true,
+    description:
+      "6-month contract with strong intent to convert. Own the platform layer for a fintech serving 200k+ MY users: k8s on EKS, Terraform-managed infra, security scanning in CI, on-call rotation. We're looking for a senior who can ship, not just configure.",
+    requirements: [
+      "5+ years platform/devops experience",
+      "Production k8s (EKS, GKE, or AKS) — at least 1 year",
+      "Terraform or Pulumi — at least 2 years",
+      "Strong AWS networking and IAM knowledge",
+    ],
+    nice: ["Fintech or regulated-industry background", "SOC2 / ISO27001 implementation experience"],
+    perks: ["RM39–45k base", "WFH 3 days/week", "Conference budget", "Potential conversion to permanent"],
+    applyEmail: "careers@peripamo.tech",
+  },
+  {
+    id: 3,
+    slug: "courtsite-fullstack",
+    company: "Courtsite",
+    title: "Full Stack Product Engineer",
+    location: "KL Eco City",
+    type: "full-time",
+    salary: "RM5,000 – RM15,000",
+    posted: "2 months ago",
+    postedDays: 60,
+    tags: ["next.js", "typescript", "postgres"],
+    urgent: false,
+    verified: true,
+    description:
+      "Courtsite is a court-booking marketplace. We're hiring a full-stack engineer to own the booking flow end-to-end — schema, API, UI, monitoring. Mid-level welcome; we pay based on demonstrated skill, not years.",
+    requirements: [
+      "2+ years production experience with a TS/JS full-stack stack",
+      "Comfortable with Postgres and SQL",
+      "Has shipped at least one user-facing product to real users",
+    ],
+    nice: ["Next.js + tRPC experience", "Has worked on a marketplace or 2-sided product"],
+    perks: ["RM5–15k based on level", "Equity (early-stage)", "Hybrid (3 days office)", "Quarterly offsite"],
+    applyEmail: "jobs@courtsite.my",
+  },
+  {
+    id: 4,
+    slug: "bungkus-rn-engineer",
+    company: "Bungkus Sdn Bhd",
+    title: "Mobile Engineer (React Native)",
+    location: "Remote",
+    type: "full-time",
+    salary: "RM8,000 – RM12,000",
+    posted: "5 days ago",
+    postedDays: 5,
+    tags: ["react-native", "typescript"],
+    urgent: true,
+    verified: true,
+    description:
+      "Ship the next version of Bungkus — the receipt-splitting app. You'll own the mobile codebase, work with our OCR pipeline, and ship to 10k+ MAU. Fully remote, SEA-friendly hours.",
+    requirements: [
+      "3+ years React Native in production",
+      "Strong TypeScript",
+      "Has shipped to both iOS and Android stores",
+    ],
+    nice: ["Experience with ML Kit / on-device OCR", "Has worked on a fintech or payments app"],
+    perks: ["RM8–12k", "Fully remote", "Async-first", "Yearly company offsite"],
+    applyEmail: "careers@bungkus.my",
+  },
+  {
+    id: 5,
+    slug: "selat-go-engineer",
+    company: "Selat",
+    title: "Backend Engineer (Go)",
+    location: "Penang",
+    type: "full-time",
+    salary: "RM10,000 – RM18,000",
+    posted: "12 days ago",
+    postedDays: 12,
+    tags: ["go", "clickhouse"],
+    urgent: false,
+    verified: true,
+    description:
+      "Build the data plane of Selat — the open-source uptime monitor for SEA. ClickHouse for time-series, Go for everything else, htmx for the UI. Mid-to-senior, in-office in Penang or remote MY.",
+    requirements: [
+      "3+ years Go in production",
+      "Has worked with a time-series or analytics database",
+      "Comfortable with low-level HTTP and networking",
+    ],
+    nice: ["OSS maintainer experience", "ClickHouse / Druid / Timescale background"],
+    perks: ["RM10–18k", "OSS time (10%)", "Hybrid Penang", "Yearly conference budget"],
+    applyEmail: "jobs@selat.dev",
+  },
+  {
+    id: 6,
+    slug: "kopipawang-flutter-lead",
+    company: "KopiPawang",
+    title: "Flutter Lead",
+    location: "Kuala Lumpur",
+    type: "full-time",
+    salary: "RM14,000 – RM22,000",
+    posted: "18 days ago",
+    postedDays: 18,
+    tags: ["flutter", "firebase", "lead"],
+    urgent: false,
+    verified: true,
+    description:
+      "Lead the mobile team of 3. Set the architecture, drive weekly releases, and own the product direction with the founders. Series A, real users, real scale problems.",
+    requirements: [
+      "5+ years mobile, 3+ years Flutter",
+      "Has led a team of 2+ engineers",
+      "Firebase + GCP in production",
+    ],
+    nice: ["Food / F&B tech background", "Has worked at a series-A startup"],
+    perks: ["RM14–22k + equity", "Hybrid KL", "Coffee stipend (obviously)", "Health insurance"],
+    applyEmail: "join@kopipawang.app",
+  },
+  {
+    id: 7,
+    slug: "ai-os-rust-tauri",
+    company: "AI-OS",
+    title: "Rust / Tauri Engineer",
+    location: "Remote",
+    type: "contract",
+    salary: "RM18,000 – RM28,000",
+    posted: "3 days ago",
+    postedDays: 3,
+    tags: ["rust", "tauri"],
+    urgent: true,
+    verified: true,
+    description:
+      "Join the AI-OS core team for a 6-month contract. Ship the production version of the voice-first linux desktop. You'll own the audio pipeline and the IPC between Rust and the Tauri frontend.",
+    requirements: [
+      "Strong production Rust",
+      "Has shipped a Tauri or Electron app to real users",
+      "Comfortable with low-latency audio (CPAL, cpal, or similar)",
+    ],
+    nice: ["Whisper / speech-to-text background", "Linux desktop internals knowledge"],
+    perks: ["RM18–28k", "Fully remote", "OSS-friendly", "Path to permanent"],
+    applyEmail: "hiring@ai-os.dev",
+  },
+  {
+    id: 8,
+    slug: "rokok-regex-devrel",
+    company: "RokokRegex",
+    title: "Developer Relations",
+    location: "Kuala Lumpur",
+    type: "part-time",
+    salary: "RM3,500 – RM5,000",
+    posted: "9 days ago",
+    postedDays: 9,
+    tags: ["devrel", "writing"],
+    urgent: false,
+    verified: true,
+    description:
+      "20 hours/week, flexible. Write technical posts, run 2 community AMAs/month, and be the public face of RokokRegex. Perfect for a senior dev who wants to slow down and write more.",
+    requirements: [
+      "5+ years dev experience",
+      "Strong written English",
+      "Has published technical writing (blog, dev.to, etc.)",
+    ],
+    nice: ["Active in a developer community", "Public-speaking experience"],
+    perks: ["RM3.5–5k for 20h/week", "Fully remote", "Conference budget"],
+    applyEmail: "team@rokokregex.app",
+  },
+  {
+    id: 9,
+    slug: "tukar-python-telegram",
+    company: "Tukar",
+    title: "Python Backend (Telegram bots)",
+    location: "Remote",
+    type: "contract",
+    salary: "RM6,000 – RM9,000",
+    posted: "21 days ago",
+    postedDays: 21,
+    tags: ["python", "telegram", "fastapi"],
+    urgent: false,
+    verified: true,
+    description:
+      "Maintain and extend the Tukar currency-rate notifier and related Telegram bots. FastAPI backend, Postgres, Redis queue. 6-month contract with strong intent to convert.",
+    requirements: [
+      "3+ years Python",
+      "Has worked with the Telegram Bot API at scale (1k+ groups)",
+      "Comfortable with FastAPI + async",
+    ],
+    nice: ["Has shipped a bot to 10k+ users", "Currency/fintech background"],
+    perks: ["RM6–9k", "Fully remote", "Async-first", "Potential permanent"],
+    applyEmail: "jobs@tukar.bot",
+  },
+  {
+    id: 10,
+    slug: "edge-runners-oss-maintainer",
+    company: "Edge Runners",
+    title: "Open Source Maintainer",
+    location: "Remote",
+    type: "part-time",
+    salary: "RM2,500 stipend",
+    posted: "30 days ago",
+    postedDays: 30,
+    tags: ["oss", "maintainer"],
+    urgent: false,
+    verified: true,
+    description:
+      "Help maintain a SelaDevs open-source project of your choice. 10 hours/week, RM2,500/month stipend, and the public credit of being on the maintainer list. For early-career devs who want OSS on their resume.",
+    requirements: [
+      "Has shipped at least one open-source project (any size)",
+      "Available 10h/week",
+      "Comfortable responding to issues and PRs",
+    ],
+    nice: ["Has been an OSS maintainer before", "Active on GitHub"],
+    perks: ["RM2,500 monthly stipend", "Public maintainer credit", "Mentorship from senior maintainers"],
+    applyEmail: "oss@seladevs.com",
+  },
+  {
+    id: 11,
+    slug: "seladevs-community-lead",
+    company: "Seladevs Core",
+    title: "Community Lead",
+    location: "Kuala Lumpur",
+    type: "full-time",
+    salary: "RM12,000 – RM16,000",
+    posted: "1 day ago",
+    postedDays: 1,
+    tags: ["community", "ops"],
+    urgent: false,
+    verified: true,
+    description:
+      "Own community ops for SelaDevs: run townhalls, run bounty flow, run partner outreach, and keep the discord healthy. This is a core-team role, not a community-manager-junior role. Reports to the founder.",
+    requirements: [
+      "3+ years community or ops experience in tech",
+      "Has run events of 100+ people",
+      "Strong written English and Bahasa Melayu",
+    ],
+    nice: ["Active in SEA tech communities", "Has worked with founders directly"],
+    perks: ["RM12–16k", "Hybrid KL", "Health insurance", "Conference budget"],
+    applyEmail: "join@seladevs.com",
+  },
+  {
+    id: 12,
+    slug: "jomenvois-founding-engineer",
+    company: "JomEnvois",
+    title: "Founding Engineer",
+    location: "Kuala Lumpur",
+    type: "full-time",
+    salary: "RM15,000 – RM25,000 + 0.5% equity",
+    posted: "7 days ago",
+    postedDays: 7,
+    tags: ["next.js", "founder"],
+    urgent: true,
+    verified: true,
+    description:
+      "Founding engineer #2 at JomEnvois — the SMS-first group-payments startup. You'll own the backend, work directly with the founder on product, and ship to thousands of users. Pre-seed funded, 18-month runway.",
+    requirements: [
+      "Has been a founding engineer or first 3 hires before",
+      "Strong full-stack (Next.js + Postgres)",
+      "Comfortable with SMS / telecom APIs (Twilio, MessageBird)",
+    ],
+    nice: ["Fintech background", "Has worked in a 2–5 person team"],
+    perks: ["RM15–25k + 0.5% equity", "Co-founder-style autonomy", "Hybrid KL", "Visa support if needed"],
+    applyEmail: "founder@jomenvois.my",
+  },
+];
+
+export const JOB_TYPES: JobType[] = ["full-time", "contract", "internship", "part-time"];

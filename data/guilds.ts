@@ -1,0 +1,253 @@
+export type GuildCategory =
+  | "frontend"
+  | "backend"
+  | "infra"
+  | "ai/ml"
+  | "mobile"
+  | "security"
+  | "web3"
+  | "design"
+  | "dx";
+
+export type GuildCadence = "weekly" | "biweekly" | "monthly";
+
+export type Guild = {
+  id: number;
+  slug: string;
+  name: string;
+  tagline: string;
+  category: GuildCategory;
+  cadence: GuildCadence;
+  recruiting: boolean;
+  members: number;
+  maxMembers: number;
+  lead: { handle: string; name: string };
+  mission: string;
+  banners: [string, string];
+  recentActivity: string;
+  nextSession?: string;
+  links: { discord?: string; github?: string; manifesto?: string };
+};
+
+export const GUILDS: Guild[] = [
+  {
+    id: 1,
+    slug: "edge-runners",
+    name: "Edge Runners",
+    tagline: "ship a 1k-star OSS tool in 90 days. we move like a sprint, ship like a studio.",
+    category: "frontend",
+    cadence: "weekly",
+    recruiting: true,
+    members: 87,
+    maxMembers: 100,
+    lead: { handle: "kagerou1107", name: "Aiman R." },
+    mission: "ship a 1k-star OSS tool in 90 days. current target: a PWA-ready showcase kit.",
+    banners: ["#8C0A26", "#5F0617"],
+    recentActivity: "2h ago",
+    nextSession: "2026-06-04T20:00+08:00",
+    links: {
+      discord: "https://discord.gg/edge-runners",
+      github: "https://github.com/seladevs/edge-runners",
+      manifesto: "https://seladevs.com/guilds/edge-runners/manifesto",
+    },
+  },
+  {
+    id: 2,
+    slug: "bento-brigade",
+    name: "Bento Brigade",
+    tagline: "designers + frontenders shipping 1 component library a month.",
+    category: "design",
+    cadence: "biweekly",
+    recruiting: true,
+    members: 54,
+    maxMembers: 60,
+    lead: { handle: "qistina.ts", name: "Qistina R." },
+    mission: "release a 30-component bento kit, MIT, with tokens and a Figma source.",
+    banners: ["#B01434", "#FF2D55"],
+    recentActivity: "5h ago",
+    nextSession: "2026-06-08T19:00+08:00",
+    links: { discord: "https://discord.gg/bento-brigade" },
+  },
+  {
+    id: 3,
+    slug: "prompt-pilots",
+    name: "Prompt Pilots",
+    tagline: "voice agents, RAG, and shipping AI to actual users — not demos.",
+    category: "ai/ml",
+    cadence: "weekly",
+    recruiting: true,
+    members: 71,
+    maxMembers: 80,
+    lead: { handle: "hafiz.py", name: "Hafiz Y." },
+    mission: "ship a voice agent that handles 1k real customer calls/week for a SEA SME.",
+    banners: ["#9B5CFF", "#FF2D55"],
+    recentActivity: "12m ago",
+    nextSession: "2026-06-03T21:00+08:00",
+    links: { github: "https://github.com/seladevs/prompt-pilots" },
+  },
+  {
+    id: 4,
+    slug: "telegram-titans",
+    name: "Telegram Titans",
+    tagline: "bots, MTProto, and the unsexy reliability work that scales them.",
+    category: "backend",
+    cadence: "weekly",
+    recruiting: true,
+    members: 39,
+    maxMembers: 50,
+    lead: { handle: "syafiqah.codes", name: "Syafiqah M." },
+    mission: "build a shared bot-hosting template that cuts deploy time from 30min to 2min.",
+    banners: ["#FF2D55", "#14070C"],
+    recentActivity: "1d ago",
+    nextSession: "2026-06-06T20:30+08:00",
+    links: { discord: "https://discord.gg/telegram-titans" },
+  },
+  {
+    id: 5,
+    slug: "rust-rangers",
+    name: "Rust Rangers",
+    tagline: "rust, no async runtime, no bullshit. we read the stdlib like scripture.",
+    category: "backend",
+    cadence: "weekly",
+    recruiting: false,
+    members: 28,
+    maxMembers: 30,
+    lead: { handle: "daniyal.rs", name: "Daniyal K." },
+    mission: "build a no-std HTTP server, line by line, as a public lab series.",
+    banners: ["#5F0617", "#FFB454"],
+    recentActivity: "8h ago",
+    nextSession: "2026-06-05T20:00+08:00",
+    links: { github: "https://github.com/seladevs/rust-rangers" },
+  },
+  {
+    id: 6,
+    slug: "cloud-cartel",
+    name: "Cloud Cartel",
+    tagline: "k8s, terraform, and the boring infrastructure that makes shipping fast.",
+    category: "infra",
+    cadence: "biweekly",
+    recruiting: true,
+    members: 46,
+    maxMembers: 60,
+    lead: { handle: "arif.builds", name: "Arif M." },
+    mission: "ship a gitops template for SEA SMEs — k8s, postgres, redis, monitoring, all 1-click.",
+    banners: ["#B01434", "#9B5CFF"],
+    recentActivity: "3h ago",
+    nextSession: "2026-06-10T19:00+08:00",
+    links: { discord: "https://discord.gg/cloud-cartel" },
+  },
+  {
+    id: 7,
+    slug: "gpu-ghosts",
+    name: "GPU Ghosts",
+    tagline: "small models, big inference. we run LLMs on a single 3090.",
+    category: "ai/ml",
+    cadence: "weekly",
+    recruiting: true,
+    members: 33,
+    maxMembers: 40,
+    lead: { handle: "iman.go", name: "Iman G." },
+    mission: "open-source a sub-200ms speech-to-text server for Bahasa Melayu.",
+    banners: ["#9B5CFF", "#5F0617"],
+    recentActivity: "20m ago",
+    nextSession: "2026-06-05T21:00+08:00",
+    links: { github: "https://github.com/seladevs/gpu-ghosts" },
+  },
+  {
+    id: 8,
+    slug: "react-renegades",
+    name: "React Renegades",
+    tagline: "react 19, server components, and the new render model. we ship the new way.",
+    category: "frontend",
+    cadence: "weekly",
+    recruiting: true,
+    members: 62,
+    maxMembers: 80,
+    lead: { handle: "najwa.codes", name: "Najwa A." },
+    mission: "rewrite the seladevs.com site in RSC, post the diff series publicly.",
+    banners: ["#FF2D55", "#B01434"],
+    recentActivity: "45m ago",
+    nextSession: "2026-06-04T20:00+08:00",
+    links: { discord: "https://discord.gg/react-renegades" },
+  },
+  {
+    id: 9,
+    slug: "svelte-syndicate",
+    name: "Svelte Syndicate",
+    tagline: "svelte 5 runes, no virtual DOM drama, just shipping.",
+    category: "frontend",
+    cadence: "monthly",
+    recruiting: true,
+    members: 24,
+    maxMembers: 40,
+    lead: { handle: "arjun.svelte", name: "Arjun N." },
+    mission: "ship nullhold to 1k active users by end of Q3.",
+    banners: ["#FFB454", "#FF2D55"],
+    recentActivity: "1d ago",
+    nextSession: "2026-06-20T19:00+08:00",
+    links: { github: "https://github.com/seladevs/svelte-syndicate" },
+  },
+  {
+    id: 10,
+    slug: "kotlin-knights",
+    name: "Kotlin Knights",
+    tagline: "android native, jetpack compose, and shipping apps that feel native on every device.",
+    category: "mobile",
+    cadence: "biweekly",
+    recruiting: true,
+    members: 31,
+    maxMembers: 50,
+    lead: { handle: "dinesh.codes", name: "Dinesh P." },
+    mission: "ship a 100% kotlin, 100% compose starter app that hits the play store in 30 days.",
+    banners: ["#B01434", "#FFB454"],
+    recentActivity: "6h ago",
+    nextSession: "2026-06-12T20:00+08:00",
+    links: { github: "https://github.com/seladevs/kotlin-knights" },
+  },
+  {
+    id: 11,
+    slug: "design-disruptors",
+    name: "Design Disruptors",
+    tagline: "the design mafia. we audit your onboarding in 24h and tell you the truth.",
+    category: "design",
+    cadence: "monthly",
+    recruiting: false,
+    members: 18,
+    maxMembers: 20,
+    lead: { handle: "ameera.dev", name: "Ameera H." },
+    mission: "publish 12 public teardowns of SEA app onboarding flows.",
+    banners: ["#FF2D55", "#9B5CFF"],
+    recentActivity: "2d ago",
+    nextSession: "2026-06-15T19:00+08:00",
+    links: { discord: "https://discord.gg/design-disruptors" },
+  },
+  {
+    id: 12,
+    slug: "security-sentinels",
+    name: "Security Sentinels",
+    tagline: "we find the bug before the bad guy does. pentests, audits, writeups.",
+    category: "security",
+    cadence: "monthly",
+    recruiting: true,
+    members: 22,
+    maxMembers: 30,
+    lead: { handle: "syamir.kl", name: "Syamir T." },
+    mission: "publish a monthly 'state of SEA appsec' report, free, no vendor sponsorship.",
+    banners: ["#5F0617", "#FF2D55"],
+    recentActivity: "3d ago",
+    nextSession: "2026-06-18T20:00+08:00",
+    links: { manifesto: "https://seladevs.com/guilds/security-sentinels/manifesto" },
+  },
+];
+
+export const GUILD_CATEGORIES: GuildCategory[] = [
+  "frontend",
+  "backend",
+  "infra",
+  "ai/ml",
+  "mobile",
+  "security",
+  "web3",
+  "design",
+  "dx",
+];
