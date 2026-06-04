@@ -1,5 +1,5 @@
-const CACHE = "seladevs-v1";
-const PRECACHE = ["/", "/offline", "/manifest.webmanifest", "/logo/seladevs-dark.png", "/logo/seladevs-light.png"];
+const CACHE = "uthmforge-v1";
+const PRECACHE = ["/", "/offline", "/manifest.webmanifest", "/logo/uthmforge-dark.png", "/logo/uthmforge-light.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));

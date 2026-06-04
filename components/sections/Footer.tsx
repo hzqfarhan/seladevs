@@ -13,8 +13,8 @@ export function Footer() {
           ))}
         </div>
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-sd-ink-soft/55">
-          <p>© 2026 seladev_os v1.0.0</p>
-          <p className="text-sd-neon-soft/60">// built with care in kl</p>
+          <p>© 2026 uthm_forge_os v1.0.0</p>
+          <p className="text-sd-neon-soft/60">// built with care in parit raja</p>
         </div>
       </div>
     </footer>

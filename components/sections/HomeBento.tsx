@@ -71,10 +71,10 @@ export function HomeBento() {
 function BentoFrameChrome() {
   return (
     <>
-      <div aria-hidden className="pointer-events-none absolute -inset-px rounded-3xl" style={{ background: "linear-gradient(180deg, rgba(255,45,85,0.15) 0%, transparent 18%, transparent 82%, rgba(255,45,85,0.10) 100%)" }} />
-      <div aria-hidden className="pointer-events-none absolute inset-0 rounded-3xl opacity-[0.04]" style={{ backgroundImage: "linear-gradient(rgba(255,45,85,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,45,85,0.6) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+      <div aria-hidden className="pointer-events-none absolute -inset-px rounded-3xl" style={{ background: "linear-gradient(180deg, rgba(242,180,65,0.15) 0%, transparent 18%, transparent 82%, rgba(242,180,65,0.10) 100%)" }} />
+      <div aria-hidden className="pointer-events-none absolute inset-0 rounded-3xl opacity-[0.04]" style={{ backgroundImage: "linear-gradient(rgba(242,180,65,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(242,180,65,0.6) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
       <div aria-hidden className="pointer-events-none absolute left-3 top-2 font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon-soft/70">
-        seladev_os // v1.0.0
+        uthm_forge_os // v1.0.0
       </div>
       <div aria-hidden className="pointer-events-none absolute right-3 top-2 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon-soft/70">
         <span className="relative inline-flex h-1.5 w-1.5">
@@ -116,7 +116,7 @@ function HeroBlock({ className }: { className?: string }) {
   return (
     <Cell className={cn("flex flex-col", className)} label="[ hero ]">
       <div className="flex items-center justify-between">
-        <Eyebrow>&lt;the forge for malaysia&apos;s future builders&gt;</Eyebrow>
+        <Eyebrow>&lt;the forge for uthm&apos;s future builders&gt;</Eyebrow>
       </div>
 
       <div className="mt-3 flex-1 grid place-items-center py-2">
@@ -125,9 +125,9 @@ function HeroBlock({ className }: { className?: string }) {
 
       <div className="mt-2 flex flex-wrap items-center gap-3">
         <BracketLink href="/about">[&gt; learn more]</BracketLink>
-        <BracketLink href="/hire/register">[&gt; sign up]</BracketLink>
+        <BracketLink href="/for-faculty">[&gt; for faculty]</BracketLink>
         <span className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.2em] text-sd-ink-soft/40">
-          // a forge for high-performance builders
+          // built in parit raja · shipped to the world
         </span>
       </div>
     </Cell>
@@ -145,9 +145,9 @@ function StatusBlock({ className }: { className?: string }) {
         </span>
       </div>
       <div className="mt-4 grid grid-cols-3 gap-2 font-mono text-[10px] uppercase tracking-[0.2em]">
-        <Tag>forge.kl</Tag>
+        <Tag>forge.uthm</Tag>
         <Tag tone="amber">build // live</Tag>
-        <Tag>node-01</Tag>
+        <Tag>uthm-forge-01</Tag>
       </div>
     </Cell>
   );
@@ -158,8 +158,8 @@ function CoordBlock({ className }: { className?: string }) {
     <Cell className={className} label="[ hud ]">
       <Eyebrow>&lt;coordinates&gt;</Eyebrow>
       <div className="mt-3 grid grid-cols-2 gap-2 font-mono text-[10px] uppercase tracking-[0.2em]">
-        <Coord label="lat" value="03.1390" />
-        <Coord label="lng" value="101.6869" />
+        <Coord label="lat" value="01.8585" />
+        <Coord label="lng" value="103.0833" />
       </div>
       <div className="mt-3 h-1 w-full overflow-hidden bg-sd-wine-700/50 rounded-full">
         <div className="h-full w-2/3 bg-sd-neon animate-hud-beam rounded-full" />
@@ -224,7 +224,7 @@ function EventBlock({ className }: { className?: string }) {
     <Cell className={className} label="[ event ]" clip>
       <Eyebrow>&lt;event&gt;</Eyebrow>
       <p className="mt-3 font-pixel uppercase text-lg text-sd-ink-strong leading-tight">
-        SelaDevs Buildathon
+        UTHM Buildathon
         <br />
         <span className="text-sd-neon">2026</span>
       </p>
@@ -232,7 +232,7 @@ function EventBlock({ className }: { className?: string }) {
         Open // Aug 2026
       </p>
       <div className="mt-3">
-        <BracketLink href="/events/seladevs-buildathon-2026" className="text-[10px]">[&gt; apply]</BracketLink>
+        <BracketLink href="/events/uthm-buildathon-2026" className="text-[10px]">[&gt; apply]</BracketLink>
       </div>
       <div aria-hidden className="mt-3 -mx-4 -mb-4 h-10" style={{ background: GRADS[0] }} />
     </Cell>
@@ -241,15 +241,15 @@ function EventBlock({ className }: { className?: string }) {
 
 function SDJobsBlock({ className }: { className?: string }) {
   return (
-    <Cell className={className} label="[ sd jobs ]">
+    <Cell className={className} label="[ industry ]">
       <div className="flex items-center justify-between">
-        <Eyebrow>&lt;sd jobs&gt;</Eyebrow>
+        <Eyebrow>&lt;industry&gt;</Eyebrow>
         <span className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.2em] text-sd-ink-soft/50">
-          post your first job free
+          sponsor a student bounty
         </span>
       </div>
       <h3 className="mt-2 font-pixel uppercase text-2xl text-sd-ink-strong">
-        ## Hire Malaysia&apos;s Best Builders
+        ## Hire UTHM&apos;s Best Builders
       </h3>
       <div className="mt-3 grid grid-cols-3 gap-2">
         {FEATURES.map((f) => (
@@ -264,12 +264,12 @@ function SDJobsBlock({ className }: { className?: string }) {
       </div>
       <div className="mt-3 flex flex-wrap items-center gap-3">
         <a
-          href="/hire/register"
-          className="inline-flex items-center font-mono text-[10px] uppercase tracking-widest text-sd-ink-strong border border-sd-neon/60 bg-sd-wine-700/60 rounded-md px-2.5 py-1.5 hover:shadow-[0_0_20px_rgba(255,45,85,0.45)] transition-shadow"
+          href="/for-industry"
+          className="inline-flex items-center font-mono text-[10px] uppercase tracking-widest text-sd-ink-strong border border-sd-neon/60 bg-sd-wine-700/60 rounded-md px-2.5 py-1.5 hover:shadow-[0_0_20px_rgba(242,180,65,0.45)] transition-shadow"
         >
           [ claim offer &gt; ]
         </a>
-        <BracketLink href="/pricing" className="text-[10px]">[&gt; see pricing]</BracketLink>
+        <BracketLink href="/sponsorship" className="text-[10px]">[&gt; sponsorship tiers]</BracketLink>
       </div>
     </Cell>
   );
@@ -441,10 +441,10 @@ function EpicBlock({ className }: { className?: string }) {
         <span className="text-sd-neon animate-text-neon">Brewing.</span>
       </p>
       <a
-        href="https://discord.gg"
+        href="https://discord.gg/uthmforge"
         target="_blank"
         rel="noreferrer"
-        className="mt-3 inline-flex items-center gap-2 font-mono uppercase tracking-widest text-[10px] border border-sd-neon/60 bg-sd-wine-700/60 text-sd-ink-strong rounded-md px-3 py-1.5 hover:shadow-[0_0_20px_rgba(255,45,85,0.55)] transition-shadow animate-discord-float"
+        className="mt-3 inline-flex items-center gap-2 font-mono uppercase tracking-widest text-[10px] border border-sd-neon/60 bg-sd-wine-700/60 text-sd-ink-strong rounded-md px-3 py-1.5 hover:shadow-[0_0_20px_rgba(242,180,65,0.55)] transition-shadow animate-discord-float"
       >
         <span aria-hidden>
           <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
@@ -485,7 +485,7 @@ function NavBlock({ className }: { className?: string }) {
             &lt;socials&gt;
           </p>
           <ul className="mt-2 space-y-1 text-xs">
-            <li><a className="text-sd-ink-soft/85 hover:text-sd-neon transition-colors" href="https://discord.gg">discord</a></li>
+            <li><a className="text-sd-ink-soft/85 hover:text-sd-neon transition-colors" href="https://discord.gg/uthmforge">discord</a></li>
             <li><a className="text-sd-ink-soft/85 hover:text-sd-neon transition-colors" href="https://twitter.com">x / twitter</a></li>
             <li><a className="text-sd-ink-soft/85 hover:text-sd-neon transition-colors" href="https://tiktok.com">tiktok</a></li>
             <li className="pt-1 mt-1 border-t border-sd-wine-500/15">

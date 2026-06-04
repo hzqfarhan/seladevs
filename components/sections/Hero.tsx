@@ -11,10 +11,10 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(60% 50% at 50% 30%, rgba(255,45,85,0.18) 0%, transparent 60%), radial-gradient(40% 40% at 80% 80%, rgba(155,92,255,0.12) 0%, transparent 70%)",
+            "radial-gradient(60% 50% at 50% 30%, rgba(242,180,65,0.18) 0%, transparent 60%), radial-gradient(40% 40% at 80% 80%, rgba(155,92,255,0.12) 0%, transparent 70%)",
         }}
       />
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(rgba(255,45,85,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,45,85,0.6) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-[0.05]" style={{ backgroundImage: "linear-gradient(rgba(242,180,65,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(242,180,65,0.6) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
 
       <Cubes />
 
@@ -27,26 +27,26 @@ export function Hero() {
         </div>
 
         <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-sd-neon-soft">
-          &lt;The forge for Malaysia&apos;s future builders&gt;
+          &lt;The forge for UTHM&apos;s future builders&gt;
         </p>
 
         <h1 className="mt-4 font-pixel uppercase leading-[0.9] tracking-tighter text-[18vw] md:text-[10rem] text-sd-ink-strong animate-text-neon">
-          SelaDevs<span className="text-sd-neon">.</span>
+          UTHM Forge<span className="text-sd-neon">.</span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-base md:text-lg text-sd-ink-soft/85">
-          A forge for high-performance builders. We are raising the next generation of technical excellence in Southeast Asia.
+          Built in Parit Raja. Shipped to the world. UTHM Forge is where students, lecturers, and clubs ship open source, run bounties, and launch FYP-grade projects.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <BracketLink href="/about">[&gt; learn more]</BracketLink>
-          <BracketLink href="/hire/register">[&gt; sign up]</BracketLink>
+          <BracketLink href="/for-faculty">[&gt; for faculty]</BracketLink>
         </div>
 
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl font-mono text-[10px] uppercase tracking-[0.2em] text-sd-ink-soft/50">
-          <Coord label="lat" value="03.1390" />
-          <Coord label="lng" value="101.6869" />
-          <Coord label="node" value="kl-forge-01" />
+          <Coord label="lat" value="01.8585" />
+          <Coord label="lng" value="103.0833" />
+          <Coord label="node" value="uthm-forge-01" />
           <Coord label="uptime" value="99.99%" />
         </div>
       </div>

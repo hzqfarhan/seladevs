@@ -3,26 +3,30 @@ export type FaqItem = { q: string; a: string };
 export const COMPANY_FAQ: FaqItem[] = [
   {
     q: "do you take a cut of the candidate's salary?",
-    a: "no. we charge a flat fee per listing, disclosed up-front. we never take a placement fee, a recruiter cut, or a commission. if anyone claiming to represent SelaDevs asks for a percentage of salary, report them to `abuse@seladevs.com`.",
+    a: "no. we charge a flat sponsorship fee, disclosed up-front. we never take a placement fee, a recruiter cut, or a commission. if anyone claiming to represent UTHM Forge asks for a percentage of salary, report them to `abuse@uthmforge.uthm.edu.my`.",
   },
   {
-    q: "what if i get no applicants?",
-    a: "you get a full refund if your listing gets 0 qualified applicants (we define \"qualified\" as matching at least 3 of the 5 requirements you posted) within 14 days. no questions asked.",
+    q: "what if my bounty gets no applicants?",
+    a: "you get a full refund if your bounty gets 0 qualifying PRs within the merge window. \"qualifying\" = matching at least 3 of the 5 acceptance criteria in the bounty spec. no questions asked.",
   },
   {
-    q: "can i edit after posting?",
-    a: "yes. up to 3 edits per listing, free. after that it's RM 50 per edit (to prevent gaming the search ranking).",
+    q: "can i edit the bounty after posting?",
+    a: "yes. up to 3 edits per bounty, free. after that it's RM 50 per edit (to prevent gaming the search ranking).",
   },
   {
     q: "refund policy?",
-    a: "within 14 days of posting, if your listing is still live and has 0 qualified applicants, full refund. after 14 days, pro-rated refund for the unused days, processed within 7 days.",
+    a: "within the merge window, if your bounty is still open and has 0 qualifying PRs, full refund. after the merge window, pro-rated refund for the unused days, processed within 7 days.",
   },
   {
     q: "international companies?",
-    a: "yes, if you are hiring for a role that is permanently remote OR based in Malaysia/Singapore/Indonesia. for other regions, we currently only accept listings from companies with an SEA office.",
+    a: "yes, if you are sponsoring a bounty that is open to UTHM students remotely OR based in Johor (Batu Pahat / Johor Bahru / Skudai). for other regions, we currently only accept sponsorships from companies with a Malaysia office or a MoU with UTHM.",
   },
   {
-    q: "do you offer screening?",
-    a: "no. we do not screen candidates. we provide the platform, the listings, and the applicant pipeline; you do the hiring. for an extra RM 500/listing, our partner guilds can do a 1-hour technical screen; ask `partnerships@seladevs.com` for details.",
+    q: "do you offer technical screening?",
+    a: "no. UTHM Forge does not screen candidates. for an extra RM 500/sponsorship, our partner circles can do a 1-hour technical screen on the bounty scope; ask `partnerships@uthmforge.uthm.edu.my` for details.",
+  },
+  {
+    q: "can a UTHM faculty co-sponsor?",
+    a: "yes. faculty sponsors and industry sponsors can co-fund a bounty. this is the most common model for FYP-aligned bounties where the faculty contributes RM 500 and the industry partner contributes the rest.",
   },
 ];

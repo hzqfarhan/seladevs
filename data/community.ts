@@ -19,106 +19,111 @@ export type Thread = {
   replies: Reply[];
 };
 
+// TODO: confirm with UTHM data team
+// 6 townhall thread seeds below. The seed set is chosen to land in mid-2026
+// for the UTHM Forge migration. The opening dates are placeholder; the real
+// UTHM data team will align them with the academic calendar.
+
 export const THREADS: Thread[] = [
   {
     id: 1,
-    slug: "is-vibe-coding-making-us-better-engineers",
-    title: "is \"vibe coding\" making us better engineers?",
+    slug: "fyp-oss-license-uthm",
+    title: "what license should FYP-Forge pick for UTHM FYPs?",
     tag: "townhall",
     opened: "2026-05-20",
-    openedBy: { handle: "kagerou1107", name: "Aiman R." },
-    body: `opening for the June townhall. the question is on the table: with LLMs now writing most of our code, are we getting better at engineering, or just faster at producing scripts that work for a demo and break in production?
+    openedBy: { handle: "haikal.fskm", name: "Haikal R." },
+    body: `opening for the June townhall. FYP-Forge is shaping up to be the canonical pipeline that turns a FSKTM FYP into a public OSS project. the question on the table: which OSS license should be the default for projects that go through the pipeline?
 
-i think the answer is "it depends on the engineer." what do you think?`,
+i think the answer is MIT for code and CC-BY-4.0 for thesis-adjacent writing. what do you think?`,
     replies: [
       {
         id: 1,
         at: "2026-05-20T21:14+08:00",
-        handle: "strdst7",
+        handle: "saifuddin.fke",
         name: "Saifuddin R.",
-        body: `counter-take: "vibe coding" is the same as every other tool. the engineers who use it well are getting better. the ones who use it badly are getting worse. the tool is a multiplier, not a substitute.`,
+        body: `counter-take: "default MIT" is the same as every other pipeline. if FYP-Forge is a UTHM flagship, we should default to Apache-2.0 for the patent grant — that gives industrial partners a clearer path to fork without legal review.`,
       },
       {
         id: 2,
         at: "2026-05-21T09:02+08:00",
-        handle: "ameera.dev",
+        handle: "ameera.fstmi",
         name: "Ameera H.",
-        body: `from a hiring angle: i have interviewed 14 candidates in the last 3 months. 9 of them proudly "vibe-coded" their take-home. 3 of those 9 could actually explain what the code did. 6 of them could not. that is a real signal, and we should be reading it.`,
+        body: `from a hiring angle: i have interviewed 14 candidates in the last 3 months. 9 of them proudly had an OSS FYP on their CV. 3 of those 9 could actually explain what the license let a downstream user do. 6 of them could not. we should make license choice a part of the FYP-Forge template, not a thing each student figures out at the end.`,
       },
       {
         id: 3,
         at: "2026-05-21T14:48+08:00",
-        handle: "tsara.id",
+        handle: "tsara.fpm",
         name: "Tsara I.",
-        body: `i think the framing is wrong. the question is not "vibe coding good or bad" — it is "what are we teaching the next generation of engineers, and does that match the world they will work in?" the answer to the second question is "we should be teaching them how to verify, debug, and refactor code that an LLM wrote." that is the actual job now.`,
+        body: `i think the framing is wrong. the question is not "MIT vs Apache" — it is "how do we teach the next generation of FSKTM engineers, and does that match the world they will work in?" the answer to the second question is: we should make license-choice a taught module, not a config flag. that is the actual job now.`,
       },
       {
         id: 4,
         at: "2026-05-22T11:30+08:00",
-        handle: "hafiz.py",
+        handle: "hafiz.fskm",
         name: "Hafiz Y.",
-        body: `one thing i have seen: junior engineers who lean on LLMs without a strong mental model ship code that "works" but is one config change away from a production incident. that is a real cost. the seniors i work with use LLMs to skip the typing, not the thinking.`,
+        body: `one thing i have seen: junior RAs who lean on OSS without a strong mental model ship code that "works" but is one license-clause away from a takedown notice. that is a real cost. the postgrads i work with treat license review as a checkpoint, not paperwork.`,
       },
       {
         id: 5,
         at: "2026-05-23T08:12+08:00",
-        handle: "kagerou1107",
-        name: "Aiman R.",
-        body: `summary for the townhall agenda: 3 takes on "multiplier, not substitute", 1 take on "verify+debug+refactor is the new job", 1 take on "juniors are shipping code that is one config away from a prod incident". we are not anti-LLM. we are pro-mental-model. closing summary at the townhall.`,
+        handle: "haikal.fskm",
+        name: "Haikal R.",
+        body: `summary for the townhall agenda: 3 takes on "Apache-2.0 for the patent grant", 1 take on "license as taught module", 1 take on "license review as RA checkpoint". we are not anti-MIT. we are pro-decision. closing summary at the townhall.`,
       },
     ],
   },
   {
     id: 2,
-    slug: "cult-of-overwork-in-sea-startups",
-    title: "the cult of overwork in SEA startups",
+    slug: "uthm-wifi-at-fkmp",
+    title: "why is UTHM Wi-Fi at FKMP still a productivity tax?",
     tag: "hot-take",
     opened: "2026-05-12",
-    openedBy: { handle: "ameera.dev", name: "Ameera H." },
-    body: `hot take: the cult of overwork in SEA startups is not a cultural inevitability. it is a deliberate choice that founders make because they think it is the only way to compete.
+    openedBy: { handle: "ameera.fstmi", name: "Ameera H." },
+    body: `hot take: UTHM Wi-Fi at FKMP is not a connectivity problem. it is a capacity-planning problem. it is a deliberate choice that UTHM IT Centre makes because the cost of upgrading the AP density in the engineering blocks is "not in this year's budget."
 
-it is not. the data is in. the SEA startups that ship sustainably out-compete the ones that burn out their engineers, on every metric that matters: retention, NPS, bug rate, time-to-feature.`,
+it does not have to be this way. the data is in. FSKTM is fully upgraded (Eduroam + UTHM-Secure). FKMP is not. the gap is real, measurable, and avoidable.`,
     replies: [
       {
         id: 1,
         at: "2026-05-12T22:40+08:00",
-        handle: "syamir.kl",
+        handle: "syamir.fskm",
         name: "Syamir T.",
-        body: `i was at a SEA startup that prided itself on "the grind." 80-hour weeks were normal. half the team left in 6 months. the ones who stayed were not the best engineers — they were the ones with the fewest options. that should tell you something.`,
+        body: `i have run traceroutes from FKMP during class hours. half the time, my packet lands in the BNM-equivalent of a captive portal hell. it is not Eduroam's fault. it is UTHM IT's auth flow. fix the auth, the Wi-Fi feels 3x faster.`,
       },
       {
         id: 2,
         at: "2026-05-13T10:05+08:00",
-        handle: "kagerou1107",
-        name: "Aiman R.",
-        body: `counter-data point: the founders of the SEA unicorns (grab, shopee, lazada) all ran 80+ hour weeks in the early years. some of that was overwork; some of that was just the right amount of urgency for the stage. the question is when it flips from "urgency" to "overwork." usually around year 3.`,
+        handle: "haikal.fskm",
+        name: "Haikal R.",
+        body: `counter-data point: FSKTM got upgraded because FSKTM lecturers filed a joint letter to UTHM IT citing the FYP-equivalent of a network audit. FKMP has not filed that letter yet. this is not a technical problem. it is a political problem.`,
       },
       {
         id: 3,
         at: "2026-05-14T08:22+08:00",
-        handle: "daniyal.rs",
+        handle: "daniyal.fke",
         name: "Daniyal K.",
-        body: `i think the answer is: pay people well enough that they do not need a second job, and trust them to manage their own hours. that is the only sustainable model.`,
+        body: `i think the answer is: give students a 1-click "report this AP" button in the UTHM Sandbox app, and have the UTHM IT Centre commit to a public uptime number per AP. that is the only way this gets fixed sustainably.`,
       },
     ],
   },
   {
     id: 3,
     slug: "how-do-you-price-bounties-fairly",
-    title: "how do you price bounties fairly?",
+    title: "how do you price UTHM Forge bounties fairly?",
     tag: "question",
     opened: "2026-05-05",
-    openedBy: { handle: "kagerou1107", name: "Aiman R." },
-    body: `we have been running the bounty board for 18 months now and we still do not have a great answer for "how much should this bounty be."
+    openedBy: { handle: "haikal.fskm", name: "Haikal R." },
+    body: `we have been running the UTHM Forge bounty board for 9 months now and we still do not have a great answer for "how much should this bounty be."
 
-the heuristic we use today: "what would a senior engineer in this stack charge for 8 hours of focused work?" which gives a range of RM 600 to RM 1,500 for most bounties.
+the heuristic we use today: "what would a senior engineer in this stack charge for 8 hours of focused work?" which gives a range of RM 350 to RM 1,200 for most bounties, with a FYP-grant ceiling of RM 1,500 for capstone-aligned work.
 
 is that right? are we under-paying? over-paying? let me know what you think.`,
     replies: [
       {
         id: 1,
         at: "2026-05-05T14:30+08:00",
-        handle: "rendra.my",
+        handle: "rendra.fkaas",
         name: "Rendra K.",
         body: `i think the 8-hour heuristic is wrong. most bounties take me 2 to 4 hours. you are paying me 8 hours of senior rate for half a day of actual work. either:
 1. lower the bounties (and accept more claimants per bounty)
@@ -127,50 +132,50 @@ is that right? are we under-paying? over-paying? let me know what you think.`,
       {
         id: 2,
         at: "2026-05-06T09:15+08:00",
-        handle: "tsara.id",
+        handle: "tsara.fpm",
         name: "Tsara I.",
-        body: `the 8-hour heuristic is correct for "fair pay" but you should not price bounties on "fair pay" alone. price them on the value to the project. a security fix that prevents a CVE is worth more than 8 hours of senior rate.`,
+        body: `the 8-hour heuristic is correct for "fair pay" but you should not price bounties on "fair pay" alone. price them on the value to UTHM Forge. an OCR pipeline that unblocks 10k scanned theses is worth more than 8 hours of senior rate.`,
       },
       {
         id: 3,
         at: "2026-05-06T20:01+08:00",
-        handle: "kagerou1107",
-        name: "Aiman R.",
+        handle: "haikal.fskm",
+        name: "Haikal R.",
         body: `both takes land. we are going to split bounties into two tiers: "standard" (8h rate) and "high-impact" (priced on risk + value). more on this in the next bounty board update.`,
       },
     ],
   },
   {
     id: 4,
-    slug: "show-and-tell-bahasa-melayu-ocr",
-    title: "show and tell: i shipped a Bahasa-Melayu OCR pipeline in 6 days",
+    slug: "show-and-tell-bhashaocr",
+    title: "show and tell: i shipped BhashaOCR in 6 days",
     tag: "show-and-tell",
     opened: "2026-04-28",
-    openedBy: { handle: "rendra.my", name: "Rendra K." },
-    body: `show and tell: i shipped a Bahasa-Melayu OCR pipeline in 6 days, end to end. 1.2k receipts/day, 91% accuracy on Bahasa item names, MIT licensed.
+    openedBy: { handle: "rendra.fkaas", name: "Rendra K." },
+    body: `show and tell: i shipped BhashaOCR, a Bahasa Melayu + Jawi OCR pipeline, in 6 days, end to end. 1.2k receipts/day on the Bungkus test rig, 91% accuracy on Bahasa item names, MIT licensed.
 
-the stack: Tesseract for line detection, a fine-tuned BERT-Mini for Bahasa item-name post-processing, and a custom CORS proxy because the public receipt-scanning APIs all wanted RM 1,200/month for a "starter" tier.
+the stack: Tesseract for line detection, a fine-tuned BERT-Mini for Bahasa item-name post-processing, and a custom CORS proxy because the public OCR APIs all wanted RM 1,200/month for a "starter" tier.
 
-the bungkus guild reviewed the PR. if you want to see the code, the repo is on github.`,
+the bungkus circle reviewed the PR. if you want to see the code, the repo is on github.`,
     replies: [
       {
         id: 1,
         at: "2026-04-28T20:12+08:00",
-        handle: "hafiz.py",
+        handle: "hafiz.fskm",
         name: "Hafiz Y.",
-        body: `this is exactly the kind of work that should be in the showcase. 6 days from "i have an idea" to "1.2k receipts/day in prod" is a real shipping velocity. +1.`,
+        body: `this is exactly the kind of work that should be in the UTHM Forge showcase. 6 days from "i have an idea" to "1.2k receipts/day on the test rig" is a real shipping velocity. +1.`,
       },
       {
         id: 2,
         at: "2026-04-29T08:00+08:00",
-        handle: "strdst7",
+        handle: "saifuddin.fke",
         name: "Saifuddin R.",
-        body: `the CORS-proxy trick is the right move. the public APIs price themselves out of the indie / SME market on purpose. building the proxy + the BERT post-processor in 6 days is the kind of leverage a small community has over a large company.`,
+        body: `the CORS-proxy trick is the right move. the public APIs price themselves out of the indie / FYP-grant market on purpose. building the proxy + the BERT post-processor in 6 days is the kind of leverage a small community has over a large company.`,
       },
       {
         id: 3,
         at: "2026-04-29T15:45+08:00",
-        handle: "ameera.dev",
+        handle: "ameera.fstmi",
         name: "Ameera H.",
         body: `linking this from the showcase. deserved.`,
       },
@@ -178,69 +183,69 @@ the bungkus guild reviewed the PR. if you want to see the code, the repo is on g
   },
   {
     id: 5,
-    slug: "every-guild-needs-a-public-mission",
-    title: "why every guild needs a public \"mission\" page",
+    slug: "uthm-monthly-hackathon",
+    title: "should UTHM host a hackathon monthly?",
     tag: "hot-take",
     opened: "2026-04-15",
-    openedBy: { handle: "ameera.dev", name: "Ameera H." },
-    body: `hot take: every guild should have a public "current mission" page. not a roadmap. not a manifesto. one sentence: "the next thing this guild is shipping, and when."
+    openedBy: { handle: "ameera.fstmi", name: "Ameera H." },
+    body: `hot take: UTHM Forge should host a hackathon every month, not just twice a year. not a 36-hour buildathon. a 12-hour, single-Saturday, single-bounty sprint. run from PTTA Workshop.
 
-the reason: a guild without a mission is a chat room. a guild with a mission is a team.`,
+the reason: hackathons are recruiting, hackathons are onboarding, hackathons are the only place where a FSKTM Y1 meets a FKMP Y4. one big hackathon a year is a missed opportunity.`,
     replies: [
       {
         id: 1,
         at: "2026-04-15T21:30+08:00",
-        handle: "kagerou1107",
-        name: "Aiman R.",
-        body: `agree. this is why the guild page on /guilds/[slug] has a "current mission" field. it is required, not optional. we should probably enforce a max length too (140 chars?) so guilds cannot hide behind marketing.`,
+        handle: "haikal.fskm",
+        name: "Haikal R.",
+        body: `agree. this is why the UTHM Forge events page already has a 12h bounty sprint template — see the Hacknight: 12-hour Bounty Sprint event for the format. we should probably enforce a "next sprint is in 30 days" cadence so it actually ships monthly.`,
       },
       {
         id: 2,
         at: "2026-04-16T07:00+08:00",
-        handle: "najwa.codes",
+        handle: "najwa.fskm",
         name: "Najwa A.",
-        body: `140 chars is too short. 280 (a tweet) is the right ceiling. it forces a real sentence, not a slogan.`,
+        body: `monthly is too often. 6 weeks is the right cadence — it forces a real rest between sprints and lets the postmortem from one event inform the next.`,
       },
       {
         id: 3,
         at: "2026-04-16T14:18+08:00",
-        handle: "ameera.dev",
+        handle: "ameera.fstmi",
         name: "Ameera H.",
-        body: `agreed on 280. and add a "last updated" timestamp so the mission has a freshness signal. stale missions = stale guilds.`,
+        body: `agreed on 6 weeks. and add a "first-time UTHM builder" track so the sprints double as recruiting. stale sprints = stale community.`,
       },
     ],
   },
   {
     id: 6,
-    slug: "what-does-verified-company-mean",
-    title: "what does \"verified company\" actually mean?",
+    slug: "ptptn-funded-side-projects",
+    title: "PTPTN-funded side projects — yay or nay?",
     tag: "question",
     opened: "2026-04-02",
-    openedBy: { handle: "kagerou1107", name: "Aiman R." },
-    body: `we mark some job listings as "verified company" and others as not. the current rule is: verified = the company has a SSM-registered Malaysian entity, has been in business for 12+ months, and has posted at least one role with us before.
+    openedBy: { handle: "haikal.fskm", name: "Haikal R." },
+    body: `open question for the UTHM Forge community: is it OK for a UTHM student on a PTPTN loan to ship paid side-projects through UTHM Forge? the current rules of PTPTN say "no additional income from non-UTHM sources" — but a RM 600 UTHM Forge bounty is, in spirit, a UTHM-source payment.
 
-is that the right bar? too high? too low? what would make you, as a candidate, trust a listing more?`,
+is that the right read? is it different if the bounty issuer is UTHM Innovation & Commercialisation vs an external partner? let me know what you think.`,
     replies: [
       {
         id: 1,
         at: "2026-04-02T19:45+08:00",
-        handle: "aishah.sh",
+        handle: "aishah.fskm",
         name: "Aishah S.",
-        body: `add: "verified by a SelaDevs member" as a separate signal. a builder who interviewed at the company and had a positive experience can vouch for the listing. low-friction, high-trust.`,
+        body: `add: "UTHM Forge bounty = UTHM-source" as an explicit reading guide, published on the bounty board. low-friction, high-clarity, and it makes the PTPTN conversation with parents much easier.`,
       },
       {
         id: 2,
         at: "2026-04-03T11:20+08:00",
-        handle: "farouq.sh",
+        handle: "farouq.ptta",
         name: "Farouq S.",
-        body: `i would trust "verified" more if there were also a "scam-flag" count. 0 scam flags in 12 months is a real signal. 3 scam flags in 6 months is a real signal too. surface both.`,
+        body: `i would trust this more if there were also a "PTPTN-flag" toggle on each bounty, set by the issuer at creation. "internal UTHM" bounties are PTPTN-safe; "external partner" bounties are flagged so the student can make an informed call.`,
       },
       {
         id: 3,
         at: "2026-04-03T18:08+08:00",
-        handle: "kagerou1107",
-        name: "Aiman R.",
-        body: `both good. we will add the "verified by a member" signal as a second badge, and the scam-flag count as a public counter on the listing. shipping next sprint.`,
+        handle: "haikal.fskm",
+        name: "Haikal R.",
+        body: `both good. we will add the "UTHM-source" reading guide as a footer on the bounty board, and the issuer-set PTPTN-flag as a public badge on each listing. shipping next sprint.`,
       },
     ],
   },

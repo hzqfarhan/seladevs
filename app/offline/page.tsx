@@ -19,7 +19,7 @@ export default function OfflinePage() {
         </p>
         <Link
           href="/"
-          className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-sd-ink-strong bg-sd-wine-700/60 border border-sd-neon/60 rounded-md px-4 py-2 hover:shadow-[0_0_20px_rgba(255,45,85,0.55)] transition-shadow"
+          className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-sd-ink-strong bg-sd-wine-700/60 border border-sd-neon/60 rounded-md px-4 py-2 hover:shadow-[0_0_20px_rgba(242,180,65,0.55)] transition-shadow"
         >
           [ &gt; retry ]
         </Link>

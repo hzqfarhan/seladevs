@@ -1,9 +1,19 @@
 import type { MetadataRoute } from "next";
+import { UTHM_FACULTIES } from "@/data/map";
+import { GUILDS } from "@/data/guilds";
+import { JOBS } from "@/data/jobs";
+import { EVENTS } from "@/data/events";
+import { BOUNTIES } from "@/data/bounties";
+import { NEWS } from "@/data/news";
+import { CHANGELOG } from "@/data/changelog";
+import { SHOWCASE } from "@/data/showcase";
+import { THREADS as COMMUNITY } from "@/data/community";
+import { MEMBERS } from "@/data/members";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://seladevs.com";
+  const base = "https://uthmforge.uthm.edu.my";
   const now = new Date();
-  const routes = [
+  const staticRoutes = [
     "/",
     "/showcase",
     "/about",
@@ -12,20 +22,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/events",
     "/news",
     "/changelog",
-    "/for-company",
+    "/for-industry",
     "/jobs",
     "/code/bounty",
-    "/for-government",
-    "/hire/register",
-    "/pricing",
+    "/for-faculty",
+    "/for-industry/register",
+    "/sponsorship",
     "/map",
     "/leaderboard",
     "/community",
-    "/for-developers",
-    "/for-companies",
     "/privacy",
     "/terms",
     "/contact",
   ];
-  return routes.map((r) => ({ url: `${base}${r}`, lastModified: now, changeFrequency: "weekly", priority: r === "/" ? 1 : 0.6 }));
+  const dynamic = [
+    ...UTHM_FACULTIES.map((f) => `/map/${f.slug}`),
+    ...GUILDS.map((g) => `/guilds/${g.slug}`),
+    ...JOBS.map((j) => `/jobs/${j.slug}`),
+    ...EVENTS.map((e) => `/events/${e.slug}`),
+    ...BOUNTIES.map((b) => `/code/bounty/${b.slug}`),
+    ...NEWS.map((n) => `/news/${n.slug}`),
+    ...CHANGELOG.map((c) => `/changelog#${c.id}`),
+    ...SHOWCASE.map((s) => `/showcase#${s.slug}`),
+    ...COMMUNITY.map((t: { slug: string }) => `/community/${t.slug}`),
+    ...MEMBERS.map((m) => `/members/${m.handle}`),
+  ];
+  return [...staticRoutes, ...dynamic].map((r) => ({
+    url: `${base}${r}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: r === "/" ? 1 : 0.6,
+  }));
 }

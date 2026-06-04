@@ -8,8 +8,8 @@ import { BentoCard } from "@/components/ui/BentoCard";
 import { PRICING_TIERS, PRICING_FEATURES, PRICING_FAQ } from "@/data/pricing";
 
 export const metadata: Metadata = {
-  title: "pricing",
-  description: "transparent, per-listing pricing. no recruiter commissions.",
+  title: "sponsorship",
+  description: "transparent sponsorship tiers for UTHM Forge. no commissions, no recruiter cuts.",
 };
 
 export default function PricingPage() {
@@ -24,10 +24,10 @@ export default function PricingPage() {
               &lt;pricing&gt;
             </p>
             <h1 className="mt-3 font-pixel uppercase leading-[0.95] text-4xl md:text-6xl text-sd-ink-strong">
-              ## pricing
+              ## sponsorship
             </h1>
             <p className="mt-4 max-w-2xl text-sd-ink-soft/80">
-              one fee per listing. no commissions, no recruiter cuts, no hidden charges.
+              one flat fee per month, per sponsor. no commissions, no recruiter cuts, no hidden charges. students, clubs, and OSS maintainers are always free.
             </p>
           </div>
         </section>
@@ -86,18 +86,18 @@ export default function PricingPage() {
                 <thead>
                   <tr className="border-b border-sd-wine-500/30">
                     <th className="px-4 py-3 text-left font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon-soft">feature</th>
-                    <th className="px-4 py-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon-soft">starter</th>
-                    <th className="px-4 py-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon">growth</th>
-                    <th className="px-4 py-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon-soft">scale</th>
+                    <th className="px-4 py-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon-soft">student club</th>
+                    <th className="px-4 py-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon">faculty sponsor</th>
+                    <th className="px-4 py-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-sd-neon-soft">industry sponsor</th>
                   </tr>
                 </thead>
                 <tbody>
                   {PRICING_FEATURES.map((row) => (
                     <tr key={row.label} className="border-b border-sd-wine-500/15">
                       <td className="px-4 py-2.5 text-sd-ink-soft/85">{row.label}</td>
-                      <td className="px-4 py-2.5 text-center font-mono text-sd-ink-soft/80">{row.starter}</td>
-                      <td className="px-4 py-2.5 text-center font-mono text-sd-ink-strong">{row.growth}</td>
-                      <td className="px-4 py-2.5 text-center font-mono text-sd-ink-soft/80">{row.scale}</td>
+                      <td className="px-4 py-2.5 text-center font-mono text-sd-ink-soft/80">{row.club}</td>
+                      <td className="px-4 py-2.5 text-center font-mono text-sd-ink-strong">{row.faculty}</td>
+                      <td className="px-4 py-2.5 text-center font-mono text-sd-ink-soft/80">{row.industry}</td>
                     </tr>
                   ))}
                 </tbody>

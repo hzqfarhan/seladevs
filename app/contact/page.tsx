@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 };
 
 const CHANNELS = [
-  { label: "general@seladevs.com", href: "mailto:hello@seladevs.com", best: "everything else" },
-  { label: "press@seladevs.com", href: "mailto:press@seladevs.com", best: "media, podcasts, articles" },
-  { label: "partnerships@seladevs.com", href: "mailto:partnerships@seladevs.com", best: "company partnerships, sponsors" },
-  { label: "security@seladevs.com", href: "mailto:security@seladevs.com", best: "responsible disclosure, abuse" },
-  { label: "discord.gg/seladevs", href: "https://discord.gg/seladevs", best: "real-time chat, community" },
+  { label: "hello@uthmforge.uthm.edu.my", href: "mailto:hello@uthmforge.uthm.edu.my", best: "everything else" },
+  { label: "press@uthmforge.uthm.edu.my", href: "mailto:press@uthmforge.uthm.edu.my", best: "media, podcasts, articles" },
+  { label: "partnerships@uthmforge.uthm.edu.my", href: "mailto:partnerships@uthmforge.uthm.edu.my", best: "industry partnerships, sponsors" },
+  { label: "security@uthmforge.uthm.edu.my", href: "mailto:security@uthmforge.uthm.edu.my", best: "responsible disclosure, abuse" },
+  { label: "discord.gg/uthmforge", href: "https://discord.gg/uthmforge", best: "real-time chat, community" },
 ];
 
 export default function ContactPage() {
@@ -72,7 +72,7 @@ export default function ContactPage() {
         <section className="px-6 md:px-10 py-8">
           <div className="mx-auto max-w-[1440px] flex items-center justify-between">
             <BracketLink href="/">[&gt; back to home]</BracketLink>
-            <BracketLink href="/about">[&gt; about seladevs]</BracketLink>
+            <BracketLink href="/about">[&gt; about uthm forge]</BracketLink>
           </div>
         </section>
       </main>

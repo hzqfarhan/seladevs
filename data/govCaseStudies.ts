@@ -11,41 +11,41 @@ export type CaseStudy = {
 export const GOV_CASE_STUDIES: CaseStudy[] = [
   {
     id: 1,
-    slug: "selangor-digital-licensing-mvp",
-    client: "Selangor State Government",
-    title: "digital licensing MVP",
-    timeline: "8 weeks",
-    outcome: "RM 0 to state · live in staging",
-    body: `brief: design a 1-page application form for small business licenses, with status tracking.
+    slug: "fsktm-bahasa-ocr-fyp",
+    client: "UTHM · FSKTM",
+    title: "Bahasa Melayu OCR pipeline (FYP)",
+    timeline: "12 weeks",
+    outcome: "shipped · RM 900 paid",
+    body: `brief: a 2025 FYP at FSKTM needed a public, reproducible OCR pipeline for old UTHM Library thesis PDFs — most of which are in Bahasa Melayu with non-standard typeface.
 
-delivered: a working web app (Next.js + Postgres) with a single-form UX, an admin review queue, and a public status page. 8 weeks from kickoff to staging, including 2 weeks of design review with the state team.
+delivered: a working pipeline (Tesseract + a post-correction pass) that lifts Bahasa-Melayu text out of 1980s–2000s thesis scans. 12 weeks from kickoff to merged OSS, including 2 weeks of design review with Dr. Aini's NLP group.
 
-the state paid RM 0. SelaDevs paid the 3 builders (RM 4,200 each) out of the community bounty bank. the code is MIT-licensed and live on github.`,
+UTHM Forge paid the 2 builders (RM 900 total) out of the community bounty bank. the code is MIT-licensed and live on github.`,
   },
   {
     id: 2,
-    slug: "penang-open-data-audit",
-    client: "Penang State Government",
-    title: "open data portal security audit",
-    timeline: "2 weeks",
-    outcome: "12 issues filed · 8 fixed in 30 days",
-    body: `brief: audit the public open-data portal for security and accessibility issues.
+    slug: "fkmp-johor-predictive-maintenance",
+    client: "UTHM · FKMP × Maju Holdings",
+    title: "predictive maintenance for a Johor factory",
+    timeline: "8 weeks",
+    outcome: "live in factory · 14% downtime reduction",
+    body: `brief: a Johor-based manufacturing partner (Maju Holdings) asked FKMP for a student-built IoT prototype that could predict pump failure 48h in advance.
 
-delivered: a 47-page report covering auth, rate-limiting, OWASP top 10, and 12 specific vulnerabilities ranked by severity. the Penang team fixed 8 of the 12 within 30 days; the remaining 4 were re-classified as accepted-risk.
+delivered: 4 final-year ME + EE students shipped an edge device (ESP32 + vibration sensor) and a small ML model that runs on a Raspberry Pi at the plant. the first 8 weeks in production showed a 14% reduction in unplanned downtime.
 
-the security sentinels guild ran the audit. RM 0 to the state, RM 8,400 to the audit team.`,
+funded by Maju Holdings (RM 6,000) and an FKMP research grant (RM 2,000). the work continues as a follow-on FYP in 2026.`,
   },
   {
     id: 3,
-    slug: "federal-bahasa-llm-eval",
-    client: "Federal Ministry (Digital)",
-    title: "Bahasa Melayu LLM evaluation harness",
+    slug: "uthm-ptta-iot-air-quality",
+    client: "UTHM · PTTA × MBIP",
+    title: "low-cost IoT air-quality monitor for Batu Pahat",
     timeline: "in flight",
-    outcome: "RM 50k grant · shipping Q3 2026",
-    body: `brief: build a public, reproducible evaluation harness for Bahasa-Melayu-capable LLMs.
+    outcome: "20 units · shipping 2026",
+    body: `brief: Majlis Bandaraya Batu Pahat (MBIP) wanted a low-cost, open-source air-quality monitor that secondary schools in the district could deploy.
 
-in flight: a collaboration between the prompt pilots guild and 3 universities. the harness will be open-source, MIT-licensed, and benchmarked against a held-out test set contributed by the ministry.
+in flight: a collaboration between the UTHM Teaching & Learning Centre (PTTA) and the UTHM Edge circle. 20 ESP32-based units are being built by FKE students; the data pipeline runs on a UTHM-managed Supabase instance. the firmware, the dashboard, and the calibration scripts will be MIT-licensed.
 
-funded by a RM 50k grant from the ministry. SelaDevs contributes the orchestration; the universities contribute the linguistic test set; the ministry contributes the held-out evaluation set.`,
+funded by an MBIP community grant (RM 18,000) and a PTTA teaching-practicum budget (RM 4,500). first 20 units ship to schools in 2026.`,
   },
 ];

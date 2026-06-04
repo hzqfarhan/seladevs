@@ -35,9 +35,9 @@ function ContactFormInner({ className, defaultTopic }: { className?: string; def
   function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) return;
-    const id = `sd-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+    const id = `uthm-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
     const payload = { ...form, at: new Date().toISOString() };
-    try { localStorage.setItem(`sd:contact:${id}`, JSON.stringify(payload)); } catch {}
+    try { localStorage.setItem(`uthm:contact:${id}`, JSON.stringify(payload)); } catch {}
     setTicket(id);
   }
 
@@ -71,7 +71,7 @@ function ContactFormInner({ className, defaultTopic }: { className?: string; def
           </button>
         </div>
         <p className="mt-4 font-mono text-[10px] uppercase tracking-widest text-sd-amber">
-          demo only. in prod this posts to /api/contact.
+          demo only. in prod this posts to /api/contact on uthmforge.uthm.edu.my.
         </p>
       </div>
     );
@@ -112,7 +112,7 @@ function ContactFormInner({ className, defaultTopic }: { className?: string; def
         [ send message ]
       </button>
       <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-sd-amber">
-        demo only. in prod this posts to /api/contact.
+        demo only. in prod this posts to /api/contact on uthmforge.uthm.edu.my.
       </p>
     </form>
   );

@@ -26,7 +26,9 @@ const pixel = VT323({
 const themeInitScript = `
 (function(){
   try {
-    var stored = localStorage.getItem('sd-theme');
+    var stored = localStorage.getItem('uthm-theme');
+    var legacy = localStorage.getItem('sd-theme');
+    if (!stored && legacy) { stored = legacy; try { localStorage.setItem('uthm-theme', legacy); } catch(e){} }
     var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
     var theme = stored === 'light' || stored === 'dark' ? stored : (prefersLight ? 'light' : 'dark');
     var html = document.documentElement;
@@ -39,45 +41,51 @@ const themeInitScript = `
 `;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://seladevs.com"),
+  metadataBase: new URL("https://uthmforge.uthm.edu.my"),
   title: {
-    default: "SelaDevs — The forge for Malaysia's future builders",
-    template: "%s · SelaDevs",
+    default: "UTHM Forge — The forge for UTHM's future builders",
+    template: "%s · UTHM Forge",
   },
   description:
-    "A forge for high-performance builders. We are raising the next generation of technical excellence in Southeast Asia.",
-  applicationName: "SelaDevs",
+    "UTHM Forge is a student and staff community for builders at Universiti Tun Hussein Onn Malaysia. Ship open source, earn bounties, find collaborators, and run events — all from Parit Raja.",
+  applicationName: "UTHM Forge",
   generator: "Next.js",
   keywords: [
-    "seladevs",
-    "malaysia developers",
-    "southeast asia",
-    "sd jobs",
+    "uthm",
+    "uthm forge",
+    "uthm developers",
+    "universiti tun hussein onn malaysia",
+    "parit raja",
+    "batu pahat",
+    "johor",
+    "uthm students",
+    "fsktm",
+    "fkmp",
+    "fke",
     "bounty board",
     "townhall",
     "guild",
-    "community map",
-    "devsecops",
-    "full stack",
+    "campus map",
+    "open source",
   ],
-  authors: [{ name: "SelaDevs" }],
-  creator: "SelaDevs",
-  publisher: "SelaDevs",
+  authors: [{ name: "UTHM Forge" }],
+  creator: "UTHM Forge",
+  publisher: "UTHM Forge",
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: "/icons/seladevs-192.png",
-    apple: "/icons/seladevs-192.png",
+    icon: "/icons/uthmforge-192.png",
+    apple: "/icons/uthmforge-192.png",
   },
   openGraph: {
     type: "website",
-    siteName: "SelaDevs",
-    title: "SelaDevs",
-    description: "The forge for Malaysia's future builders",
+    siteName: "UTHM Forge",
+    title: "UTHM Forge",
+    description: "The forge for UTHM's future builders",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SelaDevs",
-    description: "The forge for Malaysia's future builders",
+    title: "UTHM Forge",
+    description: "The forge for UTHM's future builders",
   },
   robots: { index: true, follow: true },
 };
@@ -85,7 +93,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#0B0306" },
-    { media: "(prefers-color-scheme: light)", color: "#FFF6F8" },
+    { media: "(prefers-color-scheme: light)", color: "#FBF6EC" },
   ],
   width: "device-width",
   initialScale: 1,

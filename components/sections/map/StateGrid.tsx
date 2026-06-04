@@ -32,15 +32,17 @@ export function StateGrid() {
       <div className="mx-auto max-w-[1440px]">
         <div className="sticky top-[64px] z-30 -mx-6 md:-mx-10 px-6 md:px-10 py-3 glass-dark border-y border-sd-wine-500/30 mb-6">
           <div className="mx-auto max-w-[1440px] flex flex-wrap items-center gap-2">
-            <Chip active={region === "all"} onClick={() => setRegion("all")}>all regions</Chip>
-            <Chip active={region === "peninsular"} onClick={() => setRegion("peninsular")}>peninsular</Chip>
-            <Chip active={region === "borneo"} onClick={() => setRegion("borneo")}>borneo</Chip>
-            <Chip active={region === "federal"} onClick={() => setRegion("federal")}>kl / putrajaya</Chip>
+            <Chip active={region === "all"} onClick={() => setRegion("all")}>all faculties</Chip>
+            <Chip active={region === "computing"} onClick={() => setRegion("computing")}>computing</Chip>
+            <Chip active={region === "engineering"} onClick={() => setRegion("engineering")}>engineering</Chip>
+            <Chip active={region === "applied"} onClick={() => setRegion("applied")}>applied</Chip>
+            <Chip active={region === "management"} onClick={() => setRegion("management")}>management</Chip>
+            <Chip active={region === "centre"} onClick={() => setRegion("centre")}>centres</Chip>
             <input
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="[? search state / landmark →]"
+              placeholder="[? search faculty / landmark →]"
               className="ml-auto font-mono text-[11px] uppercase tracking-widest bg-sd-bg-0/60 border border-sd-wine-500/40 rounded-full px-3 py-1.5 text-sd-ink-soft placeholder:text-sd-ink-soft/40 focus:outline-none focus:border-sd-neon w-full md:w-72"
             />
             <select
@@ -62,7 +64,7 @@ export function StateGrid() {
             <Link
               key={s.code}
               href={`/map/${s.slug}`}
-              className="group relative border border-sd-wine-500/30 bg-sd-bg-1/60 rounded-2xl p-4 transition-all duration-200 hover:border-sd-neon/70 hover:shadow-[0_0_30px_rgba(255,45,85,0.18)]"
+              className="group relative border border-sd-wine-500/30 bg-sd-bg-1/60 rounded-2xl p-4 transition-all duration-200 hover:border-sd-neon/70 hover:shadow-[0_0_30px_rgba(242,180,65,0.18)]"
             >
               <p className="font-mono text-[10px] uppercase tracking-widest text-sd-neon-soft">{s.code}</p>
               <p className="mt-1 font-pixel uppercase text-lg text-sd-ink-strong leading-tight">{s.name}</p>

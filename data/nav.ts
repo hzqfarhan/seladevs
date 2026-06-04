@@ -1,17 +1,18 @@
 export const NAV_COLUMNS = [
   {
-    eyebrow: "<project>",
+    eyebrow: "<forge>",
     items: [
       { label: "showcase", href: "/showcase" },
       { label: "manifesto", href: "/about" },
       { label: "changelog", href: "/changelog" },
+      { label: "campus map", href: "/map" },
     ],
   },
   {
     eyebrow: "<community>",
     items: [
       { label: "builders", href: "/members" },
-      { label: "guild directory", href: "/guilds" },
+      { label: "circles (guilds)", href: "/guilds" },
       { label: "events", href: "/events" },
       { label: "news", href: "/news" },
       { label: "townhall", href: "/community" },
@@ -19,19 +20,13 @@ export const NAV_COLUMNS = [
     ],
   },
   {
-    eyebrow: "<business>",
+    eyebrow: "<build>",
     items: [
-      { label: "for companies", href: "/for-company" },
-      { label: "post a job", href: "/hire/register" },
-      { label: "pricing", href: "/pricing" },
-      { label: "job board", href: "/jobs" },
       { label: "bounty board", href: "/code/bounty" },
-    ],
-  },
-  {
-    eyebrow: "<government>",
-    items: [
-      { label: "our solution", href: "/for-government" },
+      { label: "job board", href: "/jobs" },
+      { label: "for faculty", href: "/for-faculty" },
+      { label: "for industry", href: "/for-industry" },
+      { label: "sponsorship", href: "/sponsorship" },
     ],
   },
   {
@@ -47,7 +42,7 @@ export const NAV_COLUMNS = [
 export const HEADER_LINKS = [
   { label: "showcase", href: "/showcase" },
   { label: "members", href: "/members" },
-  { label: "guilds", href: "/guilds" },
+  { label: "circles", href: "/guilds" },
   { label: "events", href: "/events" },
   { label: "jobs", href: "/jobs" },
   { label: "bounty", href: "/code/bounty" },
@@ -59,8 +54,8 @@ export const FOOTER_LINKS = [
   { label: "changelog", href: "/changelog" },
   { label: "news", href: "/news" },
   { label: "leaderboard", href: "/leaderboard" },
-  { label: "for companies", href: "/for-company" },
-  { label: "for government", href: "/for-government" },
+  { label: "for faculty", href: "/for-faculty" },
+  { label: "for industry", href: "/for-industry" },
   { label: "contact", href: "/contact" },
   { label: "privacy", href: "/privacy" },
   { label: "terms", href: "/terms" },

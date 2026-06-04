@@ -1,60 +1,120 @@
 @import "tailwindcss";
 
+/* ============================================================
+   UTHM Forge theme
+   SelaDevs `sd-` token names are preserved as aliases of the
+   new `uthm-` tokens so existing components keep working.
+   New code should reference the `uthm-` names directly.
+   Palette: UTHM maroon + gold over dark/light.
+   ============================================================ */
+
 @theme {
+  /* Fonts (unchanged) */
   --font-sd-sans: var(--font-sd-sans), ui-sans-serif, system-ui, sans-serif;
   --font-sd-mono: var(--font-sd-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --font-sd-pixel: var(--font-sd-pixel), ui-monospace, monospace;
+  --font-uthm-sans: var(--font-sd-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-uthm-mono: var(--font-sd-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-uthm-pixel: var(--font-sd-pixel), ui-monospace, monospace;
 
-  /* === DARK MODE (default) === */
-  --color-sd-bg-0: #0B0306;
-  --color-sd-bg-1: #14070C;
-  --color-sd-bg-2: #1B0A11;
-  --color-sd-bg-3: #26101A;
-  --color-sd-ink-soft: #F4DDE3;
-  --color-sd-ink-strong: #FFE9EE;
-  --color-sd-line-mute: #6B3A48;
-  --color-sd-line: #8C2A3E;
+  /* === DARK MODE (default) — UTHM maroon + gold over near-black === */
+  --color-uthm-bg-0: #0B0306;        /* near-black ink */
+  --color-uthm-bg-1: #160608;        /* page bg */
+  --color-uthm-bg-2: #1F0A0E;        /* card bg */
+  --color-uthm-bg-3: #2A0F14;        /* hover / lift */
+  --color-uthm-ink-soft: #F2E4C7;    /* warm cream body text */
+  --color-uthm-ink-strong: #FFF6E0;
+  --color-uthm-line-mute: #6B2C36;
+  --color-uthm-line: #8C2A3E;
 
-  --color-sd-wine-50:  #FFE3E7;
-  --color-sd-wine-100: #FFB8C2;
-  --color-sd-wine-200: #FF8A9C;
-  --color-sd-wine-300: #F25A75;
-  --color-sd-wine-400: #D62B4B;
-  --color-sd-wine-500: #B01434;
-  --color-sd-wine-600: #8C0A26;
-  --color-sd-wine-700: #5F0617;
+  --color-uthm-maroon-50:  #FBE5E7;
+  --color-uthm-maroon-100: #F2B7BE;
+  --color-uthm-maroon-200: #DC7E8B;
+  --color-uthm-maroon-300: #B85461;
+  --color-uthm-maroon-400: #8E2A38;
+  --color-uthm-maroon-500: #7B1E2D;   /* UTHM primary maroon */
+  --color-uthm-maroon-600: #5C1320;
+  --color-uthm-maroon-700: #3E0B15;
 
-  --color-sd-neon:      #FF2D55;
-  --color-sd-neon-soft: #FF7A93;
-  --color-sd-money:     #FF4D6D;
-  --color-sd-amber:     #FFB454;
+  --color-uthm-gold:      #F2B441;     /* UTHM gold accent */
+  --color-uthm-gold-soft: #F8D38A;
+  --color-uthm-amber:     #E89A1F;
+  --color-uthm-purple:    #9B5CFF;
+  --color-uthm-money:     #F2B441;     /* re-use gold for currency */
+
+  /* === LIGHT MODE — cream + maroon + gold === */
+  --color-uthm-light-bg-0:  #FBF6EC;   /* page bg · warm cream */
+  --color-uthm-light-bg-1:  #F5EBD7;   /* card bg */
+  --color-uthm-light-bg-2:  #EFE0C2;   /* inner / code block */
+  --color-uthm-light-bg-3:  #E6D2A8;   /* hover / lift */
+  --color-uthm-light-ink:   #2A0A10;   /* body text */
+  --color-uthm-light-ink-2: #140307;
+  --color-uthm-light-line:  #E2C8A1;
+  --color-uthm-light-line-strong: #C9A672;
+  --color-uthm-light-maroon:  #7B1E2D;
+  --color-uthm-light-gold:    #C8902A;
+  --color-uthm-light-gold-soft: #E2B458;
+  --color-uthm-light-amber: #A86E1A;
+  --color-uthm-light-money: #C8902A;
+  --color-uthm-light-purple: #6E3FB8;
+
+  /* Legacy `sd-` aliases — preserve original values so existing
+     components keep working. New code should use the `uthm-` tokens. */
+  --color-sd-bg-0: var(--color-uthm-bg-0);
+  --color-sd-bg-1: var(--color-uthm-bg-1);
+  --color-sd-bg-2: var(--color-uthm-bg-2);
+  --color-sd-bg-3: var(--color-uthm-bg-3);
+  --color-sd-ink-soft: var(--color-uthm-ink-soft);
+  --color-sd-ink-strong: var(--color-uthm-ink-strong);
+  --color-sd-line-mute: var(--color-uthm-line-mute);
+  --color-sd-line: var(--color-uthm-line);
+
+  --color-sd-wine-50:  #FBE5E7;
+  --color-sd-wine-100: #F2B7BE;
+  --color-sd-wine-200: #DC7E8B;
+  --color-sd-wine-300: #B85461;
+  --color-sd-wine-400: #8E2A38;
+  --color-sd-wine-500: #7B1E2D;
+  --color-sd-wine-600: #5C1320;
+  --color-sd-wine-700: #3E0B15;
+
+  --color-sd-neon:      #F2B441;     /* "neon" now = UTHM gold */
+  --color-sd-neon-soft: #F8D38A;
+  --color-sd-money:     #F2B441;
+  --color-sd-amber:     #E89A1F;
   --color-sd-purple:    #9B5CFF;
 
-  /* === LIGHT MODE PALETTE — soft red pastel === */
-  --color-sd-light-bg-0:  #FFF5F3;   /* page bg · soft blush */
-  --color-sd-light-bg-1:  #FFEBE7;   /* card bg */
-  --color-sd-light-bg-2:  #FFE0DA;   /* inner / code block */
-  --color-sd-light-bg-3:  #FFD2C9;   /* hover / lift */
-  --color-sd-light-ink:   #3A0A18;   /* body text */
-  --color-sd-light-ink-2: #1A040B;   /* strong text */
-  --color-sd-light-line:  #F5C5BC;   /* subtle line */
-  --color-sd-light-line-strong: #E89A8C;
-  --color-sd-light-wine:  #B01434;
-  --color-sd-light-neon:  #D62B4B;
-  --color-sd-light-neon-soft: #E66578;
-  --color-sd-light-amber: #C8681A;
-  --color-sd-light-money: #D63355;
-  --color-sd-light-purple: #6E3FB8;
+  --color-sd-light-bg-0:  var(--color-uthm-light-bg-0);
+  --color-sd-light-bg-1:  var(--color-uthm-light-bg-1);
+  --color-sd-light-bg-2:  var(--color-uthm-light-bg-2);
+  --color-sd-light-bg-3:  var(--color-uthm-light-bg-3);
+  --color-sd-light-ink:   var(--color-uthm-light-ink);
+  --color-sd-light-ink-2: var(--color-uthm-light-ink-2);
+  --color-sd-light-line:  var(--color-uthm-light-line);
+  --color-sd-light-line-strong: var(--color-uthm-light-line-strong);
+  --color-sd-light-wine:  var(--color-uthm-light-maroon);
+  --color-sd-light-neon:  var(--color-uthm-light-gold);
+  --color-sd-light-neon-soft: var(--color-uthm-light-gold-soft);
+  --color-sd-light-amber: var(--color-uthm-light-amber);
+  --color-sd-light-money: var(--color-uthm-light-money);
+  --color-sd-light-purple: var(--color-uthm-light-purple);
 }
 
 @layer base {
   :root {
     color-scheme: dark;
-    --sd-map-fill-low: #5F0617;
-    --sd-map-fill-med: #8C0A26;
-    --sd-map-fill-high: #B01434;
-    --sd-map-fill-vhigh: #FF2D55;
-    --sd-map-hover: #FF2D55;
+    /* UTHM campus map density palette (defaults: dark) */
+    --uf-map-fill-low: #3E0B15;
+    --uf-map-fill-med: #5C1320;
+    --uf-map-fill-high: #7B1E2D;
+    --uf-map-fill-vhigh: #F2B441;
+    --uf-map-hover: #F2B441;
+    /* legacy sd- aliases for back-compat with existing components */
+    --sd-map-fill-low: var(--uf-map-fill-low);
+    --sd-map-fill-med: var(--uf-map-fill-med);
+    --sd-map-fill-high: var(--uf-map-fill-high);
+    --sd-map-fill-vhigh: var(--uf-map-fill-vhigh);
+    --sd-map-hover: var(--uf-map-hover);
   }
   html {
     background: var(--color-sd-bg-0);
@@ -66,15 +126,20 @@
     color-scheme: light;
     background: var(--color-sd-light-bg-0);
     color: var(--color-sd-light-ink);
-    --sd-map-fill-low: #FCDAD3;
-    --sd-map-fill-med: #F5A89A;
-    --sd-map-fill-high: #D62B4B;
-    --sd-map-fill-vhigh: #B01434;
-    --sd-map-hover: #B01434;
+    --uf-map-fill-low: #EFE0C2;
+    --uf-map-fill-med: #DCB36A;
+    --uf-map-fill-high: #C8902A;
+    --uf-map-fill-vhigh: #7B1E2D;
+    --uf-map-hover: #7B1E2D;
+    --sd-map-fill-low: var(--uf-map-fill-low);
+    --sd-map-fill-med: var(--uf-map-fill-med);
+    --sd-map-fill-high: var(--uf-map-fill-high);
+    --sd-map-fill-vhigh: var(--uf-map-fill-vhigh);
+    --sd-map-hover: var(--uf-map-hover);
   }
   body { overflow-x: hidden; }
-  ::selection { background: var(--color-sd-neon); color: #14070C; }
-  html.light ::selection { background: var(--color-sd-light-neon); color: #FFF5F3; }
+  ::selection { background: var(--color-sd-neon); color: #0B0306; }
+  html.light ::selection { background: var(--color-sd-light-neon); color: #FBF6EC; }
   *:focus-visible {
     outline: 2px solid var(--color-sd-neon);
     outline-offset: 2px;
@@ -90,14 +155,14 @@
   .font-pixel { font-family: var(--font-sd-pixel); }
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { scrollbar-width: none; }
-  .glow-wine { box-shadow: 0 0 20px rgba(255, 45, 85, 0.45); }
-  .glow-wine-strong { box-shadow: 0 0 40px rgba(255, 45, 85, 0.55); }
-  html.light .glow-wine { box-shadow: 0 0 18px rgba(214, 43, 75, 0.35); }
-  html.light .glow-wine-strong { box-shadow: 0 0 32px rgba(214, 43, 75, 0.45); }
-  .text-shadow-neon { text-shadow: 0 0 12px rgba(255, 45, 85, 0.7), 0 0 24px rgba(255, 45, 85, 0.35); }
-  .glass-dark { background: rgba(20, 7, 12, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-  html.light .glass-dark { background: rgba(255, 245, 243, 0.82); }
-  .glass-light { background: rgba(255, 246, 248, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .glow-wine { box-shadow: 0 0 20px rgba(242, 180, 65, 0.45); }
+  .glow-wine-strong { box-shadow: 0 0 40px rgba(242, 180, 65, 0.55); }
+  html.light .glow-wine { box-shadow: 0 0 18px rgba(200, 144, 42, 0.35); }
+  html.light .glow-wine-strong { box-shadow: 0 0 32px rgba(200, 144, 42, 0.45); }
+  .text-shadow-neon { text-shadow: 0 0 12px rgba(242, 180, 65, 0.7), 0 0 24px rgba(242, 180, 65, 0.35); }
+  .glass-dark { background: rgba(22, 6, 8, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  html.light .glass-dark { background: rgba(251, 246, 236, 0.82); }
+  .glass-light { background: rgba(255, 246, 224, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
   .clip-card { clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%); }
   .clip-corner { clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%); }
 
@@ -280,16 +345,16 @@
   to { transform: rotate(-360deg); }
 }
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 10px rgba(255,45,85,0.35); }
-  50% { box-shadow: 0 0 30px rgba(255,45,85,0.75); }
+  0%, 100% { box-shadow: 0 0 10px rgba(242,180,65,0.35); }
+  50% { box-shadow: 0 0 30px rgba(242,180,65,0.75); }
 }
 html.light @keyframes glow {
-  0%, 100% { box-shadow: 0 0 10px rgba(214,43,75,0.25); }
-  50% { box-shadow: 0 0 30px rgba(214,43,75,0.55); }
+  0%, 100% { box-shadow: 0 0 10px rgba(200,144,42,0.25); }
+  50% { box-shadow: 0 0 30px rgba(200,144,42,0.55); }
 }
 @keyframes pulse-neon {
-  0%, 100% { text-shadow: 0 0 8px rgba(255,45,85,0.5); }
-  50% { text-shadow: 0 0 18px rgba(255,45,85,1), 0 0 32px rgba(255,45,85,0.5); }
+  0%, 100% { text-shadow: 0 0 8px rgba(242,180,65,0.5); }
+  50% { text-shadow: 0 0 18px rgba(242,180,65,1), 0 0 32px rgba(242,180,65,0.5); }
 }
 @keyframes scanline {
   0% { transform: translateY(-100%); }
@@ -304,8 +369,8 @@ html.light @keyframes glow {
   61%, 99% { opacity: 0.4; }
 }
 @keyframes textNeonPulse {
-  0%, 100% { filter: brightness(1); text-shadow: 0 0 12px rgba(255,45,85,0.5); }
-  50% { filter: brightness(1.15); text-shadow: 0 0 28px rgba(255,45,85,0.9); }
+  0%, 100% { filter: brightness(1); text-shadow: 0 0 12px rgba(242,180,65,0.5); }
+  50% { filter: brightness(1.15); text-shadow: 0 0 28px rgba(242,180,65,0.9); }
 }
 @keyframes borderPan {
   0% { background-position: 0% 50%; }
@@ -397,19 +462,19 @@ html.light @keyframes shimmer {
 .animate-glow { animation: glow 3s ease-in-out infinite; }
 .animate-pulse-neon { animation: pulse-neon 2s ease-in-out infinite; }
 .animate-scanline { animation: scanline 4s linear infinite; }
-.animate-hud-beam { background: linear-gradient(90deg, transparent, rgba(255,45,85,0.35), transparent); background-size: 200% 100%; animation: hudScanBeam 5s linear infinite; }
-html.light .animate-hud-beam { background: linear-gradient(90deg, transparent, rgba(214,43,75,0.3), transparent); background-size: 200% 100%; }
+.animate-hud-beam { background: linear-gradient(90deg, transparent, rgba(242,180,65,0.35), transparent); background-size: 200% 100%; animation: hudScanBeam 5s linear infinite; }
+html.light .animate-hud-beam { background: linear-gradient(90deg, transparent, rgba(200,144,42,0.3), transparent); background-size: 200% 100%; }
 .animate-hud-blink { animation: hudCoordBlink 1s ease-in-out infinite; }
 .animate-text-neon { animation: textNeonPulse 2.5s ease-in-out infinite; }
-.animate-border-pan { background: conic-gradient(from var(--ang,0deg), transparent 0deg, rgba(255,45,85,0.6) 30deg, transparent 60deg); animation: borderPan 6s linear infinite; }
+.animate-border-pan { background: conic-gradient(from var(--ang,0deg), transparent 0deg, rgba(242,180,65,0.6) 30deg, transparent 60deg); animation: borderPan 6s linear infinite; }
 .animate-gradient { background-size: 200% 200%; animation: gradient 8s ease infinite; }
 .animate-glitch-subtle { animation: glitch-anim-subtle 4s steps(1) infinite; }
 .animate-logo-glitch { animation: logoGlitch 7s steps(1) infinite; }
 .animate-discord-glitch { animation: discordGlitchAnim 6s steps(1) infinite; }
 .animate-discord-float { animation: discordFloat 4s ease-in-out infinite; }
 .animate-flicker { animation: flicker 6s steps(1) infinite; }
-.animate-shimmer { background: linear-gradient(90deg, transparent, rgba(255,45,85,0.15), transparent); background-size: 1000px 100%; animation: shimmer 2s linear infinite; }
-html.light .animate-shimmer { background: linear-gradient(90deg, transparent, rgba(214,43,75,0.12), transparent); }
+.animate-shimmer { background: linear-gradient(90deg, transparent, rgba(242,180,65,0.15), transparent); background-size: 1000px 100%; animation: shimmer 2s linear infinite; }
+html.light .animate-shimmer { background: linear-gradient(90deg, transparent, rgba(200,144,42,0.12), transparent); }
 .animate-live-ping::after { content: ""; position: absolute; inset: 0; border-radius: 9999px; animation: live-ping 2s cubic-bezier(0,0,0.2,1) infinite; }
 .animate-marquee { animation: marquee-infinite 30s linear infinite; }
 .animate-marquee-reverse { animation: marquee-reverse-infinite 30s linear infinite; }

@@ -24,7 +24,7 @@ export function Header() {
               href="/"
               className="hidden sm:inline font-mono text-[10px] uppercase tracking-[0.2em] text-sd-ink-soft/55 hover:text-sd-neon-soft"
             >
-              seladev_os
+              uthm_forge_os
             </Link>
           </div>
 
@@ -42,7 +42,7 @@ export function Header() {
 
           <div className="flex items-center gap-1.5">
             <a
-              href="https://discord.gg/seladevs"
+              href="https://discord.gg/uthmforge"
               target="_blank"
               rel="noreferrer"
               aria-label="Discord"
